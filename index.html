@@ -404,10 +404,16 @@
           <p class="eyebrow" data-i18n="bookEyebrow">Prenota la consulenza</p>
           <h2 data-i18n="bookTitle">Porta OpenClaw nel tuo flusso di lavoro con una sessione operativa su Teams.</h2>
           <p data-i18n="bookSub">Compila i dati e ricevi proposta oraria entro 24 ore lavorative.</p>
-          <a class="btn btn-primary" href="https://teams.microsoft.com" target="_blank" rel="noreferrer" data-i18n="bookTeams">Apri Teams</a>
+          <a class="btn btn-primary" href="mailto:agenticforge@libero.it?subject=Richiesta%20consulenza%20AgentForge" data-i18n="bookTeams">Apri Teams</a>
         </div>
 
-        <form class="lead-form reveal" id="leadForm">
+        <form class="lead-form reveal" id="leadForm" action="https://formsubmit.co/agenticforge@libero.it" method="POST">
+          <input type="hidden" name="_subject" value="Nuova richiesta consulenza AgentForge" />
+          <input type="hidden" name="_next" value="https://agenticforge.it.com/thanks.html" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_autoresponse" value="Abbiamo ricevuto la tua richiesta di consulenza AgentForge. Ti ricontatteremo al piu presto." />
+          <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" />
+
           <label for="consultingType" data-i18n="formTypeLabel">Tipo di consulenza</label>
           <select id="consultingType" name="consultingType" required>
             <option value="" data-i18n="formTypePlaceholder">Seleziona il focus della sessione</option>
@@ -441,6 +447,7 @@
 
           <button type="submit" class="btn btn-primary full" data-i18n="formSubmit">Invia richiesta consulenza</button>
           <p class="form-note" id="formMessage" aria-live="polite"></p>
+          <p class="form-help" data-i18n="formHelp">Il form invia davvero la richiesta a agenticforge@libero.it tramite backend esterno per siti statici.</p>
         </form>
       </div>
     </section>

@@ -8,13 +8,13 @@ const translations = {
     navAdvisory: "Strategy Lab",
     navContact: "Contact",
     navFaq: "FAQ",
-    navCta: "Book on Teams",
+    navCta: "Book consulting",
     heroEyebrow: "AgentForge Consulting",
     heroTitle:
       "We help you set up OpenClaw when needed and design AI agents that do real work.",
     heroSub:
       "Private Microsoft Teams sessions for setup, agent strategy, workflow design, automations, and channel decisions like Telegram, email, dashboards, and backoffice.",
-    heroCtaPrimary: "Book your consulting session",
+    heroCtaPrimary: "Request your consulting session",
     heroCtaSecondary: "View packages",
     heroBullet1: "Full setup on Windows / macOS",
     heroBullet2: "Essential hardening to reduce data risk",
@@ -198,7 +198,7 @@ const translations = {
       "Bring OpenClaw or your next agent workflow into the business with a focused Teams session.",
     bookSub:
       "Fill in your details and receive a proposed time within 24 business hours.",
-    bookTeams: "Open Teams",
+    bookTeams: "Direct email",
     formTypeLabel: "Consulting type",
     formTypePlaceholder: "Select the session focus",
     formTypeSetup: "Setup and installation",
@@ -221,12 +221,14 @@ const translations = {
     formTelegramLabel: "Telegram handle (optional)",
     formTelegramPh: "@yourhandle",
     formSubmit: "Send consulting request",
+    formHelp:
+      "The form sends the request directly to agenticforge@libero.it through a static-form backend.",
     footerCopy:
       "Consulting for OpenClaw, AI agents, and strategy calls on Teams.",
     title: "AgentForge | OpenClaw And AI Agents Consulting",
     description:
       "Book a customized Teams consulting session for OpenClaw setup, AI agent strategy, and improvement of real workflows.",
-    formSuccess: "Request received. We will contact you within 24 business hours.",
+    formSuccess: "Your request is being sent.",
     formMissing: "Please fill in all required fields correctly.",
   },
   it: {
@@ -237,12 +239,12 @@ const translations = {
     navAdvisory: "Strategy Lab",
     navContact: "Contatti",
     navFaq: "FAQ",
-    navCta: "Prenota su Teams",
+    navCta: "Prenota consulenza",
     heroEyebrow: "AgentForge Consulting",
     heroTitle: "Ti aiutiamo a configurare OpenClaw, quando serve, e a progettare agenti AI che facciano lavoro vero.",
     heroSub:
       "Sessioni private su Microsoft Teams per setup, strategia agenti, workflow, automazioni e scelta dei canali giusti come Telegram, email, dashboard e backoffice.",
-    heroCtaPrimary: "Blocca la tua consulenza",
+    heroCtaPrimary: "Richiedi la tua consulenza",
     heroCtaSecondary: "Vedi pacchetti",
     heroBullet1: "Configurazione completa su Windows / macOS",
     heroBullet2: "Hardening minimo per ridurre rischi dati",
@@ -422,7 +424,7 @@ const translations = {
     bookTitle:
       "Porta OpenClaw o il tuo prossimo workflow agentico nel business con una sessione mirata su Teams.",
     bookSub: "Compila i dati e ricevi proposta oraria entro 24 ore lavorative.",
-    bookTeams: "Apri Teams",
+    bookTeams: "Email diretta",
     formTypeLabel: "Tipo di consulenza",
     formTypePlaceholder: "Seleziona il focus della sessione",
     formTypeSetup: "Setup e installazione",
@@ -444,12 +446,14 @@ const translations = {
     formTelegramLabel: "Handle Telegram (opzionale)",
     formTelegramPh: "@tuohandle",
     formSubmit: "Invia richiesta consulenza",
+    formHelp:
+      "Il form invia davvero la richiesta a agenticforge@libero.it tramite backend esterno per siti statici.",
     footerCopy:
       "Consulenza per OpenClaw, agenti AI e sessioni strategiche su Teams.",
     title: "AgentForge | Consulenza OpenClaw E Agenti AI",
     description:
       "Prenota una consulenza personalizzata su Teams per setup OpenClaw, strategia agenti AI e miglioramento di workflow reali.",
-    formSuccess: "Richiesta ricevuta. Ti contattiamo entro 24 ore lavorative.",
+    formSuccess: "La richiesta sta venendo inviata.",
     formMissing: "Compila correttamente tutti i campi obbligatori.",
   },
   ar: {
@@ -460,7 +464,7 @@ const translations = {
     navAdvisory: "مختبر الاستراتيجية",
     navContact: "التواصل",
     navFaq: "الأسئلة الشائعة",
-    navCta: "احجز عبر Teams",
+    navCta: "احجز استشارة",
     heroEyebrow: "AgentForge Consulting",
     heroTitle: "نساعدك على إعداد OpenClaw عند الحاجة وتصميم وكلاء ذكاء اصطناعي يقومون بعمل حقيقي.",
     heroSub:
@@ -635,7 +639,7 @@ const translations = {
     bookEyebrow: "احجز الاستشارة",
     bookTitle: "أدخل OpenClaw أو سير العمل الوكيلي التالي إلى عملك عبر جلسة مركزة على Teams.",
     bookSub: "املأ البيانات وسنرسل لك موعدًا مقترحًا خلال 24 ساعة عمل.",
-    bookTeams: "فتح Teams",
+    bookTeams: "بريد مباشر",
     formTypeLabel: "نوع الاستشارة",
     formTypePlaceholder: "اختر محور الجلسة",
     formTypeSetup: "الإعداد والتثبيت",
@@ -657,12 +661,14 @@ const translations = {
     formTelegramLabel: "معرّف Telegram (اختياري)",
     formTelegramPh: "@yourhandle",
     formSubmit: "إرسال طلب الاستشارة",
+    formHelp:
+      "يرسل النموذج الطلب مباشرة إلى agenticforge@libero.it عبر خدمة نماذج للمواقع الثابتة.",
     footerCopy:
       "استشارات لـ OpenClaw ووكلاء الذكاء الاصطناعي والجلسات الاستراتيجية عبر Teams.",
     title: "AgentForge | استشارات OpenClaw ووكلاء الذكاء الاصطناعي",
     description:
       "احجز استشارة مخصصة عبر Teams لإعداد OpenClaw واستراتيجية الوكلاء وتحسين مسارات العمل الفعلية.",
-    formSuccess: "تم استلام طلبك. سنتواصل معك خلال 24 ساعة عمل.",
+    formSuccess: "يتم الآن إرسال الطلب.",
     formMissing: "يرجى تعبئة جميع الحقول المطلوبة بشكل صحيح.",
   },
 };
@@ -717,24 +723,15 @@ const savedLang = localStorage.getItem("preferredLang");
 applyLanguage(savedLang && translations[savedLang] ? savedLang : "it");
 
 if (form) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  form.addEventListener("submit", () => {
     const lang = document.documentElement.lang === "ar"
       ? "ar"
       : document.documentElement.lang === "en"
         ? "en"
         : "it";
 
-    if (!form.checkValidity()) {
-      formMessage.textContent = translations[lang].formMissing;
-      formMessage.style.color = "var(--danger)";
-      form.reportValidity();
-      return;
-    }
-
     formMessage.textContent = translations[lang].formSuccess;
     formMessage.style.color = "#97d7cb";
-    form.reset();
   });
 }
 

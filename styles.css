@@ -613,6 +613,18 @@ a {
   color: #97d7cb;
 }
 
+.form-help {
+  font-size: 0.8rem;
+  color: #9fb3c8;
+}
+
+.honey-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .site-footer {
   border-top: 1px solid rgba(174, 213, 248, 0.2);
   background: rgba(6, 11, 17, 0.86);
