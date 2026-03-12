@@ -1,0 +1,20 @@
+{
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "dmPolicy": "pairing",
+      "allowFrom": ["${TELEGRAM_ALLOWED_USER_ID}"],
+      "groupPolicy": "allowlist",
+      "groupAllowFrom": ["${TELEGRAM_ALLOWED_USER_ID}"],
+      "groups": {
+        "${TELEGRAM_ALLOWED_GROUP_ID}": {}
+      },
+      "ackReaction": "🦞",
+      "historyLimit": 50
+    }
+  },
+  "messages": {
+    "ackReaction": "🦞"
+  }
+}
