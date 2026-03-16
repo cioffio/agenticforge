@@ -56,6 +56,29 @@ const translations = {
     workflowStep3Body: "Tools, skills, and permissions set with intent",
     workflowStep4: "Launch",
     workflowStep4Body: "First agent tested on a useful task",
+    guidesEyebrow: "Practical guides",
+    guidesTitle:
+      "The first pages worth reading if you want to start using OpenClaw in a practical way.",
+    guidesBody:
+      "These guides target real questions: installation, operating system, agents, and first concrete use cases.",
+    guide1Title: "Install OpenClaw",
+    guide1Body:
+      "Main guide with official commands, initial onboarding, and quick links for every system.",
+    guide2Title: "OpenClaw on Windows",
+    guide2Body:
+      "Recommended WSL2 path, PowerShell alternative, and useful checks right after setup.",
+    guide3Title: "OpenClaw on macOS",
+    guide3Body:
+      "Official script, onboarding, and first steps to reach a clean working base quickly.",
+    guide4Title: "OpenClaw on Linux",
+    guide4Body:
+      "Official installation, dashboard check, and fast transition toward tools and agents.",
+    guide5Title: "Install agents",
+    guide5Body:
+      "How to move from OpenClaw installed to a first useful agent with plugins and minimal configuration.",
+    guide6Title: "Ready agents",
+    guide6Body:
+      "Concrete examples for support, research, reporting, and real operational workflows.",
     stat1: "Consulting duration based on package",
     stat2: "Customized Teams session",
     stat3: "Maximum 48h technical follow-up window",
@@ -310,6 +333,29 @@ const translations = {
     workflowStep3Body: "Tool, skill e permessi con criterio",
     workflowStep4: "Lancia",
     workflowStep4Body: "Primo agente testato su un task utile",
+    guidesEyebrow: "Guide operative",
+    guidesTitle:
+      "Le prime pagine utili da leggere se vuoi partire con OpenClaw in modo pratico.",
+    guidesBody:
+      "Queste guide nascono per intercettare dubbi reali: installazione, sistema operativo, agenti e primi use case concreti.",
+    guide1Title: "Installare OpenClaw",
+    guide1Body:
+      "Guida madre con comandi ufficiali, onboarding iniziale e link rapidi per tutti i sistemi.",
+    guide2Title: "OpenClaw su Windows",
+    guide2Body:
+      "Percorso consigliato con WSL2, alternativa PowerShell e controlli utili dopo il setup.",
+    guide3Title: "OpenClaw su macOS",
+    guide3Body:
+      "Script ufficiale, onboarding e primi passi per arrivare velocemente a una base pulita.",
+    guide4Title: "OpenClaw su Linux",
+    guide4Body:
+      "Installazione ufficiale, verifica dashboard e passaggio rapido verso tool e agenti.",
+    guide5Title: "Installare agenti",
+    guide5Body:
+      "Come passare da OpenClaw installato al primo agente utile con plugin e configurazione minima.",
+    guide6Title: "Agenti pronti",
+    guide6Body:
+      "Esempi concreti di agenti per supporto, ricerca, reporting e workflow operativi reali.",
     stat1: "Durata consulenza in base al pacchetto",
     stat2: "Sessione personalizzata su Teams",
     stat3: "Finestra massima per follow-up tecnico",
@@ -559,6 +605,29 @@ const translations = {
     workflowStep3Body: "الأدوات والمهارات والصلاحيات بإعداد مقصود",
     workflowStep4: "أطلق",
     workflowStep4Body: "أول وكيل مختبر على مهمة مفيدة",
+    guidesEyebrow: "أدلة عملية",
+    guidesTitle:
+      "أول الصفحات التي تستحق القراءة إذا أردت البدء مع OpenClaw بطريقة عملية.",
+    guidesBody:
+      "هذه الأدلة تستهدف أسئلة حقيقية: التثبيت، نظام التشغيل، الوكلاء، وأول حالات الاستخدام العملية.",
+    guide1Title: "تثبيت OpenClaw",
+    guide1Body:
+      "الدليل الرئيسي مع الأوامر الرسمية وخطوات البدء السريع وروابط مباشرة لكل الأنظمة.",
+    guide2Title: "OpenClaw على Windows",
+    guide2Body:
+      "المسار الموصى به عبر WSL2، والبديل عبر PowerShell، والفحوصات المفيدة بعد التثبيت.",
+    guide3Title: "OpenClaw على macOS",
+    guide3Body:
+      "السكريبت الرسمي، وخطوات البدء، وأول خطوات الوصول إلى قاعدة نظيفة بسرعة.",
+    guide4Title: "OpenClaw على Linux",
+    guide4Body:
+      "التثبيت الرسمي، والتحقق عبر لوحة التحكم، والانتقال السريع إلى الأدوات والوكلاء.",
+    guide5Title: "تثبيت الوكلاء",
+    guide5Body:
+      "كيف تنتقل من OpenClaw المثبت إلى أول وكيل مفيد مع الإضافات والتهيئة الأساسية.",
+    guide6Title: "وكلاء جاهزون",
+    guide6Body:
+      "أمثلة عملية للدعم والبحث والتقارير ومسارات العمل التشغيلية الحقيقية.",
     stat1: "مدة الاستشارة حسب الباقة",
     stat2: "جلسة مخصصة عبر Teams",
     stat3: "حد أقصى 48 ساعة للمتابعة التقنية",

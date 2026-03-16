@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Come Installare OpenClaw | Guida Pratica</title>
+  <meta name="description" content="Guida pratica per installare OpenClaw su Windows, macOS e Linux con i comandi ufficiali, onboarding iniziale e primi passi utili." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/install-openclaw/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Come Installare OpenClaw | Guida Pratica" />
+  <meta property="og:description" content="Installazione OpenClaw, onboarding iniziale e link rapidi per Windows, macOS e Linux." />
+  <meta property="og:url" content="https://agenticforge.live/install-openclaw/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Come Installare OpenClaw | Guida Pratica" />
+  <meta name="twitter:description" content="Installazione OpenClaw, onboarding iniziale e link rapidi per Windows, macOS e Linux." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-text">AgentForge</span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/">Torna alla home</a>
+        <a class="btn btn-primary" href="/#book">Prenota il setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Guida pratica</p>
+        <h1 class="doc-title">Come installare OpenClaw e arrivare al primo agente funzionante</h1>
+        <p class="doc-intro">Questa e la guida madre: ti mostra il flusso piu semplice per installare OpenClaw, completare l'onboarding iniziale e arrivare a un ambiente pronto su Windows, macOS o Linux senza perdere tempo tra comandi sparsi e configurazioni a meta.</p>
+        <div class="doc-actions">
+          <a class="btn btn-primary" href="/openclaw-windows/">Guida Windows</a>
+          <a class="btn btn-ghost" href="/openclaw-macos/">Guida macOS</a>
+          <a class="btn btn-ghost" href="/openclaw-linux/">Guida Linux</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>Il flusso piu semplice in 3 passaggi</h2>
+            <ol>
+              <li>Installa OpenClaw con lo script ufficiale giusto per il tuo sistema.</li>
+              <li>Esegui l'onboarding guidato per configurare gateway e impostazioni base.</li>
+              <li>Apri la dashboard e verifica che il primo agente risponda davvero.</li>
+            </ol>
+          </div>
+
+          <div class="doc-block">
+            <h2>Comandi ufficiali da cui partire</h2>
+            <h3>macOS, Linux e WSL2</h3>
+            <div class="code-block"><pre><code>curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash</code></pre></div>
+            <h3>Windows PowerShell</h3>
+            <div class="code-block"><pre><code>iwr -useb https://openclaw.ai/install.ps1 | iex</code></pre></div>
+            <p>Dopo l'installazione, il passo piu utile e l'onboarding guidato:</p>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw dashboard</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Quale guida scegliere</h2>
+            <ul>
+              <li>Se usi Windows, la strada consigliata dalla documentazione e WSL2.</li>
+              <li>Se lavori su Mac, la via piu diretta e lo script ufficiale per macOS.</li>
+              <li>Se sei su Linux, lo stesso script ufficiale resta il punto di partenza piu semplice.</li>
+            </ul>
+            <p>Se il tuo obiettivo non e solo installare OpenClaw, ma far partire un workflow utile, il passo successivo e configurare agenti, plugin e tool con criterio.</p>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Vai dritto al punto</h3>
+            <ul>
+              <li><a href="/openclaw-windows/">OpenClaw su Windows</a></li>
+              <li><a href="/openclaw-macos/">OpenClaw su macOS</a></li>
+              <li><a href="/openclaw-linux/">OpenClaw su Linux</a></li>
+              <li><a href="/installare-agenti/">Come installare agenti</a></li>
+              <li><a href="/agenti-pronti/">Esempi di agenti pronti</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/">Home</a> · <a href="/#book">Prenota il setup</a></p>
+    </div>
+  </footer>
+</body>
+</html>

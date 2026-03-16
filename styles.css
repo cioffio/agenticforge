@@ -411,6 +411,91 @@ a {
   color: #a5bbcf;
 }
 
+.page-layout {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: start;
+}
+
+.doc-title {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.14;
+  color: #f4f9ff;
+  margin-bottom: 1rem;
+}
+
+.doc-intro {
+  max-width: 72ch;
+  font-size: 1.02rem;
+}
+
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+}
+
+.doc-block {
+  border: 1px solid rgba(176, 214, 250, 0.2);
+  border-radius: 16px;
+  padding: 1.15rem;
+  background: rgba(8, 16, 28, 0.72);
+}
+
+.doc-block + .doc-block {
+  margin-top: 1rem;
+}
+
+.doc-block h2 {
+  color: #f0f8ff;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+}
+
+.doc-block h3 {
+  color: #f0f8ff;
+  margin: 1rem 0 0.5rem;
+}
+
+.doc-block p + p,
+.doc-block ul + p,
+.doc-block p + ul,
+.doc-block pre + p {
+  margin-top: 0.8rem;
+}
+
+.doc-block ul,
+.doc-block ol {
+  display: grid;
+  gap: 0.55rem;
+  padding-inline-start: 1.15rem;
+}
+
+.code-block {
+  overflow-x: auto;
+  border: 1px solid rgba(0, 255, 224, 0.18);
+  border-radius: 14px;
+  padding: 0.95rem;
+  background: #07111c;
+}
+
+.code-block code,
+.code-block pre {
+  margin: 0;
+  color: #9ff9e2;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sticky-card {
+  position: sticky;
+  top: 98px;
+}
+
 .stats-grid {
   display: grid;
   gap: 1rem;
@@ -483,6 +568,8 @@ a {
 }
 
 .feature-card {
+  display: block;
+  height: 100%;
   border: 1px solid rgba(176, 214, 250, 0.24);
   border-radius: 15px;
   padding: 1rem;
@@ -752,7 +839,8 @@ a {
   .two-col,
   .cta-grid,
   .timeline,
-  .workflow-shell {
+  .workflow-shell,
+  .page-layout {
     grid-template-columns: 1fr;
   }
 
@@ -799,6 +887,10 @@ a {
     align-items: flex-start;
     justify-content: center;
     padding: 1rem 0;
+  }
+
+  .sticky-card {
+    position: static;
   }
 }
 
