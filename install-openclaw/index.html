@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
   <title>Come Installare OpenClaw | Guida Pratica</title>
   <meta name="description" content="Guida pratica per installare OpenClaw su Windows, macOS e Linux con i comandi ufficiali, onboarding iniziale e primi passi utili." />
   <meta name="robots" content="index, follow" />

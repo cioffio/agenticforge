@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
   <title>OpenClaw Linux | Installazione Guidata</title>
   <meta name="description" content="Come installare OpenClaw su Linux con lo script ufficiale, onboarding guidato e check finale con dashboard." />
   <meta name="robots" content="index, follow" />

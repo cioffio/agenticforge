@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
   <title>Come Installare Agenti in OpenClaw | Guida Pratica</title>
   <meta name="description" content="Guida pratica per installare agenti in OpenClaw: onboarding, agenti, plugin e passi utili per passare da setup a workflow reale." />
   <meta name="robots" content="index, follow" />

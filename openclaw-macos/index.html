@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
   <title>OpenClaw macOS | Installazione Guidata</title>
   <meta name="description" content="Guida pratica per installare OpenClaw su macOS con lo script ufficiale, onboarding iniziale e primi controlli utili." />
   <meta name="robots" content="index, follow" />

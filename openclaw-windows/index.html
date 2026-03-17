@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
   <title>OpenClaw Windows | Installazione Guidata</title>
   <meta name="description" content="Come installare OpenClaw su Windows: percorso consigliato con WSL2, alternativa PowerShell e primi controlli dopo il setup." />
   <meta name="robots" content="index, follow" />

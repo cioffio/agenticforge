@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
   <title>Agenti Pronti per OpenClaw | Esempi Utili</title>
   <meta name="description" content="Esempi concreti di agenti pronti da configurare con OpenClaw: supporto, ricerca, reporting, follow-up e workflow reali." />
   <meta name="robots" content="index, follow" />
