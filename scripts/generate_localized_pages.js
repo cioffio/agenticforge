@@ -113,6 +113,10 @@ function localizeHome(lang) {
   html = html.replace(/href="\/openclaw-linux\/"/g, `href="/${lang}/openclaw-linux/"`);
   html = html.replace(/href="\/installare-agenti\/"/g, `href="/${lang}/installare-agenti/"`);
   html = html.replace(/href="\/agenti-pronti\/"/g, `href="/${lang}/agenti-pronti/"`);
+  html = html.replace(/href="\/openclaw-ollama\/"/g, `href="/${lang}/openclaw-ollama/"`);
+  html = html.replace(/href="\/troubleshooting-openclaw\/"/g, `href="/${lang}/troubleshooting-openclaw/"`);
+  html = html.replace(/href="\/openclaw-tools-plugins\/"/g, `href="/${lang}/openclaw-tools-plugins/"`);
+  html = html.replace(/href="\/primo-agente-openclaw\/"/g, `href="/${lang}/primo-agente-openclaw/"`);
   html = html.replace(/value="https:\/\/agenticforge\.live\/thanks\.html"/, `value="${thanksUrl}"`);
   write(`${lang}/index.html`, html);
 }

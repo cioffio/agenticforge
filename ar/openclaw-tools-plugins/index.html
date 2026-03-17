@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>كيفية ربط الأدوات والإضافات في OpenClaw | دليل عملي</title>
+  <meta name="description" content="دليل عملي لربط الأدوات والإضافات في OpenClaw: الفروق، الأوامر المفيدة، الحد الأدنى من الأمان، وترتيب الإعداد الصحيح." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/ar/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/openclaw-tools-plugins/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="كيفية ربط الأدوات والإضافات في OpenClaw | دليل عملي" />
+  <meta property="og:description" content="استخدم الأدوات والإضافات في OpenClaw من دون جعل الإعداد أثقل أو أكثر هشاشة." />
+  <meta property="og:url" content="https://agenticforge.live/ar/openclaw-tools-plugins/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="كيفية ربط الأدوات والإضافات في OpenClaw | دليل عملي" />
+  <meta name="twitter:description" content="استخدم الأدوات والإضافات في OpenClaw من دون جعل الإعداد أثقل أو أكثر هشاشة." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/ar/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">إعداد OpenClaw وأدلته والوكلاء الجاهزون</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/ar/install-openclaw/">دليل التثبيت</a>
+        <a class="btn btn-primary" href="/ar/#book">احجز الإعداد</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">الأدوات والإضافات</p>
+        <h1 class="doc-title">كيفية ربط الأدوات والإضافات في OpenClaw من دون تحويل الإعداد إلى فوضى</h1>
+        <p class="doc-intro">في OpenClaw ليست الإضافات مجرد شكل. يمكنها إضافة تعريفات أدوات وأوامر CLI وHTTP routes وخدمات وامتدادات أخرى. النقطة الحقيقية ليست تثبيت عدد كبير منها، بل فهم متى تفيد وكيف لا تكسر الـ gateway.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>الفرق العملي</h2>
+            <p>الأدوات الأساسية موجودة أصلًا داخل OpenClaw. أما الإضافات فتمدد المنصة ويمكن أن تقدم أوامر وتكاملات وخدمات خلفية. في الوثائق الرسمية أول أمر يستحق البدء به هو:</p>
+            <div class="code-block"><pre><code>openclaw plugins list</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>أنظف مسار</h2>
+            <ol>
+              <li>اعرف ما هو محمّل بالفعل عبر <code>openclaw plugins list</code>.</li>
+              <li>ثبّت إضافة رسمية واحدة فقط إذا كانت تخدم أول workflow.</li>
+              <li>أعد تشغيل الـ gateway واضبط الإضافة داخل entry الخاصة بها.</li>
+            </ol>
+            <div class="code-block"><pre><code>openclaw plugins install @openclaw/voice-call
+openclaw plugins enable voice-call
+openclaw plugins doctor</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>تفصيلة أمان مهمة</h2>
+            <p>وثائق OpenClaw واضحة جدًا: الإضافات الأصلية تعمل داخل نفس العملية مع الـ gateway ويجب التعامل معها ككود موثوق. هذا يعني أن إضافة سيئة قد تزعزع كامل النظام.</p>
+            <ul>
+              <li>ثبّت فقط الإضافات التي تفهمها أو تثق بها</li>
+              <li>لا تضف الإضافات قبل أن تملك workflow واحدًا واضحًا</li>
+              <li>استخدم <code>plugins.allow</code> أو قائمة دنيا عندما يصبح الإعداد أكثر جدية</li>
+            </ul>
+          </div>
+
+          <div class="doc-block">
+            <h2>متى تفيد الإضافات فعلًا</h2>
+            <p>تفيد عندما يحتاج use case إلى قدرة غير موجودة في الـ core، مثل تكامل خاص أو قناة اختيارية. لا تفيد لمجرد أنك تريد "ذكاء اصطناعي أكثر". الترتيب الصحيح يبقى ثابتًا: أولًا OpenClaw، ثم النماذج، ثم وكيل واحد، ثم فقط الإضافات المهمة فعلًا.</p>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>الترتيب الموصى به</h3>
+            <ul>
+              <li><a href="/ar/install-openclaw/">ثبّت OpenClaw</a></li>
+              <li><a href="/ar/openclaw-ollama/">اربط نموذجًا</a></li>
+              <li><a href="/ar/primo-agente-openclaw/">تحقق من الوكيل الأول</a></li>
+              <li><a href="/ar/troubleshooting-openclaw/">التعامل مع المشكلات</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/ar/">الرئيسية</a> · <a href="/ar/primo-agente-openclaw/">الوكيل الأول</a></p>
+    </div>
+  </footer>
+</body>
+</html>

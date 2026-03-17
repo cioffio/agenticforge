@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>كيفية بناء أول وكيل مفيد في OpenClaw | دليل عملي</title>
+  <meta name="description" content="دليل عملي للانتقال من OpenClaw المثبت إلى أول وكيل مفيد: اختيار النموذج، تعريف المهمة، التحقق في dashboard، والخطوات التالية." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/ar/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/primo-agente-openclaw/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="كيفية بناء أول وكيل مفيد في OpenClaw | دليل عملي" />
+  <meta property="og:description" content="أنظف طريق للوصول إلى أول وكيل OpenClaw يحل مهمة حقيقية." />
+  <meta property="og:url" content="https://agenticforge.live/ar/primo-agente-openclaw/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="كيفية بناء أول وكيل مفيد في OpenClaw | دليل عملي" />
+  <meta name="twitter:description" content="أنظف طريق للوصول إلى أول وكيل OpenClaw يحل مهمة حقيقية." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/ar/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">إعداد OpenClaw وأدلته والوكلاء الجاهزون</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/ar/install-openclaw/">دليل التثبيت</a>
+        <a class="btn btn-primary" href="/ar/#book">احجز الإعداد</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">الوكيل الأول</p>
+        <h1 class="doc-title">كيفية بناء أول وكيل مفيد في OpenClaw من دون البدء من فكرة أكبر من اللازم</h1>
+        <p class="doc-intro">لا يحتاج الوكيل الأول إلى أن يكون مدهشًا، بل مفيدًا. أفضل مسار هو الانطلاق من قاعدة مستقرة واختيار نموذج مناسب والتحقق من مهمة واحدة ملموسة قبل إضافة القنوات أو الإضافات أو الأتمتة.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>الخطوة 1: قاعدة سليمة وdashboard يعمل</h2>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw doctor
+openclaw dashboard</code></pre></div>
+            <p>إذا لم يعمل هذا، فالمشكلة ليست في الوكيل بل في الإعداد نفسه. يجب التحقق من الوكيل الأول فوق قاعدة سليمة.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>الخطوة 2: اختر نموذجًا يناسب المهمة</h2>
+            <div class="code-block"><pre><code>openclaw models list
+openclaw models status</code></pre></div>
+            <p>وثائق OpenClaw توصي بالبدء بأفضل نموذج متاح للمهمة ثم استخدام fallback فقط عندما تفرض التكلفة أو السرعة ذلك. وإذا كنت تستخدم Ollama فتحقق أولًا أن النموذج ظاهر فعلًا ومفيد للأدوات.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>الخطوة 3: تحقّق من مهمة واحدة فقط</h2>
+            <ul>
+              <li>لا تبدأ من "وكيل شامل"</li>
+              <li>اختر مهمة متكررة يسهل التحقق منها</li>
+              <li>قِس هل النتيجة توفر وقتًا فعليًا أم لا</li>
+            </ul>
+            <p>من أفضل الاختبارات الأولى: دعم البريد الإلكتروني، تجميع ملاحظات من web research، متابعة بسيطة، أو reporting دوري.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>الخطوة 4: أضف الإضافات أو القنوات بعد ذلك فقط</h2>
+            <p>كثير من المستخدمين يعقّدون التدفق مبكرًا جدًا. اجعل وكيلًا واحدًا يعمل أولًا داخل dashboard أو Control UI. بعدها فقط يصبح من المنطقي إضافة الإضافات أو القنوات أو التكاملات التي تزيد مساحة الخطأ.</p>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>التدفق الموصى به</h3>
+            <ul>
+              <li><a href="/ar/install-openclaw/">ثبّت OpenClaw</a></li>
+              <li><a href="/ar/openclaw-ollama/">اختر نموذجًا مع Ollama</a></li>
+              <li><a href="/ar/openclaw-tools-plugins/">أضف الأدوات فقط عند الحاجة</a></li>
+              <li><a href="/ar/troubleshooting-openclaw/">عالج الأعطال إذا ظهر شيء</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/ar/">الرئيسية</a> · <a href="/ar/openclaw-ollama/">OpenClaw مع Ollama</a></p>
+    </div>
+  </footer>
+</body>
+</html>

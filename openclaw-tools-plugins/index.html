@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>Come Collegare Tool e Plugin in OpenClaw | Guida Pratica</title>
+  <meta name="description" content="Guida pratica per collegare tool e plugin in OpenClaw: differenze, comandi utili, sicurezza minima e ordine giusto di configurazione." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/openclaw-tools-plugins/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/openclaw-tools-plugins/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Come Collegare Tool e Plugin in OpenClaw | Guida Pratica" />
+  <meta property="og:description" content="Usa plugin e tool in OpenClaw senza appesantire il setup o rompere il gateway." />
+  <meta property="og:url" content="https://agenticforge.live/openclaw-tools-plugins/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Come Collegare Tool e Plugin in OpenClaw | Guida Pratica" />
+  <meta name="twitter:description" content="Usa plugin e tool in OpenClaw senza appesantire il setup o rompere il gateway." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guide e agenti pronti</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/install-openclaw/">Guida installazione</a>
+        <a class="btn btn-primary" href="/#book">Prenota il setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Tool e plugin</p>
+        <h1 class="doc-title">Come collegare tool e plugin in OpenClaw senza trasformare il setup in caos</h1>
+        <p class="doc-intro">In OpenClaw i plugin non sono un dettaglio estetico: possono aggiungere tool, comandi CLI, route HTTP, servizi e altre estensioni. Per questo il punto non e installarne tanti, ma capire quando servono davvero e come non rompere il gateway.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>La differenza pratica</h2>
+            <p>I tool core fanno gia parte di OpenClaw. I plugin invece estendono il sistema e possono introdurre comandi, agent tools, integrazioni e servizi in background. Nei docs ufficiali il comando base da cui partire e questo:</p>
+            <div class="code-block"><pre><code>openclaw plugins list</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Il percorso piu pulito</h2>
+            <ol>
+              <li>Guarda cosa e gia caricato con <code>openclaw plugins list</code>.</li>
+              <li>Installa un plugin ufficiale solo se serve davvero al primo workflow.</li>
+              <li>Riavvia il gateway e configura il plugin nella sua entry dedicata.</li>
+            </ol>
+            <div class="code-block"><pre><code>openclaw plugins install @openclaw/voice-call
+openclaw plugins enable voice-call
+openclaw plugins doctor</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Un dettaglio importante di sicurezza</h2>
+            <p>La documentazione OpenClaw e molto chiara: i plugin nativi girano in-process con il gateway e vanno trattati come codice trusted. Questo vuol dire che un plugin mal fatto puo rompere o destabilizzare il sistema. Quindi:</p>
+            <ul>
+              <li>installa solo plugin che capisci o di cui ti fidi</li>
+              <li>non aggiungere plugin prima di avere un primo workflow chiaro</li>
+              <li>usa <code>plugins.allow</code> o una selezione minima quando il setup diventa piu serio</li>
+            </ul>
+          </div>
+
+          <div class="doc-block">
+            <h2>Quando i plugin servono davvero</h2>
+            <p>Servono quando il caso d'uso richiede una capacita non inclusa nel core, per esempio una integrazione specifica o un canale opzionale. Non servono per "fare piu AI". Il criterio giusto e sempre questo: prima fai funzionare OpenClaw, poi modelli, poi un agente, poi eventualmente i plugin strettamente utili.</p>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Ordine consigliato</h3>
+            <ul>
+              <li><a href="/install-openclaw/">Installa OpenClaw</a></li>
+              <li><a href="/openclaw-ollama/">Collega un modello</a></li>
+              <li><a href="/primo-agente-openclaw/">Valida il primo agente</a></li>
+              <li><a href="/troubleshooting-openclaw/">Controlla il troubleshooting</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/">Home</a> · <a href="/primo-agente-openclaw/">Primo agente</a></p>
+    </div>
+  </footer>
+</body>
+</html>

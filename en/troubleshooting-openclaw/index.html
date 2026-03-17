@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>OpenClaw Troubleshooting | Common Errors and Fixes</title>
+  <meta name="description" content="OpenClaw troubleshooting guide: quick checks for gateway, dashboard, models, and plugins to find where setup is actually breaking." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/en/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/troubleshooting-openclaw/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OpenClaw Troubleshooting | Common Errors and Fixes" />
+  <meta property="og:description" content="A practical triage checklist for gateway, dashboard, model, and plugin issues." />
+  <meta property="og:url" content="https://agenticforge.live/en/troubleshooting-openclaw/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OpenClaw Troubleshooting | Common Errors and Fixes" />
+  <meta name="twitter:description" content="A practical triage checklist for gateway, dashboard, model, and plugin issues." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/en/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/en/install-openclaw/">Install guide</a>
+        <a class="btn btn-primary" href="/en/#book">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Troubleshooting</p>
+        <h1 class="doc-title">OpenClaw not working? Start from these checks before random fixes</h1>
+        <p class="doc-intro">The official OpenClaw docs include a very useful triage ladder. If you follow it in order, you can quickly tell whether the problem is in the gateway, channels, model, dashboard, or system itself. This is the practical shortcut.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>The first-60-seconds checklist</h2>
+            <div class="code-block"><pre><code>openclaw status
+openclaw status --all
+openclaw gateway probe
+openclaw gateway status
+openclaw doctor
+openclaw channels status --probe
+openclaw logs --follow</code></pre></div>
+            <p>This sequence is recommended in the official docs for fast triage. If something fails here, there is no point changing plugins or models blindly.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>If dashboard or Control UI do not connect</h2>
+            <ul>
+              <li><code>openclaw gateway status</code> should show an active runtime and a healthy RPC probe.</li>
+              <li>If you see auth errors, the issue may be the token or authentication mode.</li>
+              <li>If you see connection errors, the cause is often a wrong URL or port.</li>
+            </ul>
+            <p>Bring gateway and UI back into shape before changing anything else.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>If the gateway does not start</h2>
+            <ul>
+              <li>port already in use</li>
+              <li>wrong gateway mode</li>
+              <li>bind without auth on non-local interfaces</li>
+            </ul>
+            <p>The core commands stay the same: <code>openclaw gateway status</code>, <code>openclaw doctor</code>, and live logs.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>If the issue looks model- or plugin-related</h2>
+            <div class="code-block"><pre><code>openclaw models status
+openclaw models list
+openclaw plugins list
+openclaw plugins doctor</code></pre></div>
+            <ul>
+              <li>If a model is blocked, the issue may be an allowlist under <code>agents.defaults.models</code>.</li>
+              <li>If a plugin is installed but does not load, it may be missing a valid manifest or the right config.</li>
+              <li>Remember that native plugins run in-process inside the gateway, so a bad plugin can destabilize the whole system.</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Related guides</h3>
+            <ul>
+              <li><a href="/en/install-openclaw/">Install OpenClaw</a></li>
+              <li><a href="/en/openclaw-ollama/">OpenClaw with Ollama</a></li>
+              <li><a href="/en/openclaw-tools-plugins/">Tools and plugins</a></li>
+              <li><a href="/en/primo-agente-openclaw/">First useful agent</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/en/">Home</a> · <a href="/en/openclaw-ollama/">OpenClaw with Ollama</a></p>
+    </div>
+  </footer>
+</body>
+</html>

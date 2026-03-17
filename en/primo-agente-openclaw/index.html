@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>How to Build Your First Useful Agent in OpenClaw | Practical Guide</title>
+  <meta name="description" content="Practical guide to move from OpenClaw installed to the first useful agent: model choice, task definition, dashboard validation, and next steps." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/en/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/primo-agente-openclaw/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/primo-agente-openclaw/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Build Your First Useful Agent in OpenClaw | Practical Guide" />
+  <meta property="og:description" content="The cleanest path to the first OpenClaw agent that solves a real task." />
+  <meta property="og:url" content="https://agenticforge.live/en/primo-agente-openclaw/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Build Your First Useful Agent in OpenClaw | Practical Guide" />
+  <meta name="twitter:description" content="The cleanest path to the first OpenClaw agent that solves a real task." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/en/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/en/install-openclaw/">Install guide</a>
+        <a class="btn btn-primary" href="/en/#book">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">First agent</p>
+        <h1 class="doc-title">How to build your first useful agent in OpenClaw without starting from an idea that is too big</h1>
+        <p class="doc-intro">The first agent does not need to be impressive. It needs to be useful. The best path is starting from a stable base, choosing a sensible model, and validating one concrete task before adding channels, plugins, or automation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>Step 1: healthy base and a working dashboard</h2>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw doctor
+openclaw dashboard</code></pre></div>
+            <p>If this does not work, the problem is not the agent but the setup. The first agent must be validated on top of a healthy base.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>Step 2: choose a model that fits the job</h2>
+            <div class="code-block"><pre><code>openclaw models list
+openclaw models status</code></pre></div>
+            <p>The OpenClaw docs recommend starting with the best model available for the task and using fallbacks only when cost or latency require it. If you are using Ollama, first confirm the model is actually visible and useful for tool workflows.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>Step 3: validate one single task</h2>
+            <ul>
+              <li>do not start from a “universal agent”</li>
+              <li>pick one repetitive task that is easy to verify</li>
+              <li>measure whether the result really saves time</li>
+            </ul>
+            <p>Good first tests include email support, web-research note collection, simple follow-up, or recurring reporting.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>Step 4: only then add plugins or channels</h2>
+            <p>Many users make the flow too complex too early. First make one agent work inside the dashboard or Control UI. Only then is it worth adding plugins, channels, or extra integrations that increase the surface area for failure.</p>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Recommended flow</h3>
+            <ul>
+              <li><a href="/en/install-openclaw/">Install OpenClaw</a></li>
+              <li><a href="/en/openclaw-ollama/">Choose a model with Ollama</a></li>
+              <li><a href="/en/openclaw-tools-plugins/">Add tools only when needed</a></li>
+              <li><a href="/en/troubleshooting-openclaw/">Debug if something breaks</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/en/">Home</a> · <a href="/en/openclaw-ollama/">OpenClaw with Ollama</a></p>
+    </div>
+  </footer>
+</body>
+</html>

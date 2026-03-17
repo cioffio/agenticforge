@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>حل مشكلات OpenClaw | أخطاء شائعة وإصلاحات</title>
+  <meta name="description" content="دليل troubleshooting لـ OpenClaw: فحوصات سريعة للـ gateway والـ dashboard والنماذج والإضافات لمعرفة أين ينكسر الإعداد فعلاً." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/ar/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/troubleshooting-openclaw/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/troubleshooting-openclaw/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="حل مشكلات OpenClaw | أخطاء شائعة وإصلاحات" />
+  <meta property="og:description" content="قائمة triage عملية لمشكلات الـ gateway والـ dashboard والنماذج والإضافات." />
+  <meta property="og:url" content="https://agenticforge.live/ar/troubleshooting-openclaw/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="حل مشكلات OpenClaw | أخطاء شائعة وإصلاحات" />
+  <meta name="twitter:description" content="قائمة triage عملية لمشكلات الـ gateway والـ dashboard والنماذج والإضافات." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/ar/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">إعداد OpenClaw وأدلته والوكلاء الجاهزون</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/ar/install-openclaw/">دليل التثبيت</a>
+        <a class="btn btn-primary" href="/ar/#book">احجز الإعداد</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Troubleshooting</p>
+        <h1 class="doc-title">هل OpenClaw لا يعمل؟ ابدأ من هذه الفحوصات قبل أي إصلاح عشوائي</h1>
+        <p class="doc-intro">وثائق OpenClaw الرسمية تتضمن سلّم triage مفيد جدًا. إذا اتبعته بالترتيب ستعرف بسرعة هل المشكلة في الـ gateway أو القنوات أو النموذج أو الـ dashboard أو في النظام نفسه. هذه هي المختصر العملي.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>قائمة أول 60 ثانية</h2>
+            <div class="code-block"><pre><code>openclaw status
+openclaw status --all
+openclaw gateway probe
+openclaw gateway status
+openclaw doctor
+openclaw channels status --probe
+openclaw logs --follow</code></pre></div>
+            <p>هذا التسلسل موصى به في الوثائق الرسمية لعمل triage سريع. إذا فشل شيء هنا، فلا معنى لتغيير الإضافات أو النماذج عشوائيًا.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>إذا لم يتصل الـ dashboard أو Control UI</h2>
+            <ul>
+              <li>يجب أن يظهر <code>openclaw gateway status</code> أن الـ runtime نشط وأن probe الـ RPC سليم.</li>
+              <li>إذا ظهرت أخطاء auth فالمشكلة قد تكون في الـ token أو وضعية المصادقة.</li>
+              <li>إذا ظهرت أخطاء connect فغالبًا السبب URL أو port خاطئ.</li>
+            </ul>
+            <p>أعد ترتيب الـ gateway والواجهة أولاً قبل تغيير أي شيء آخر.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>إذا كان الـ gateway لا يبدأ</h2>
+            <ul>
+              <li>port مستخدم مسبقًا</li>
+              <li>gateway mode غير صحيح</li>
+              <li>bind بلا auth على واجهات غير محلية</li>
+            </ul>
+            <p>الأوامر الأساسية تبقى نفسها: <code>openclaw gateway status</code> و <code>openclaw doctor</code> ومتابعة الـ logs.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>إذا بدا أن المشكلة في النموذج أو الإضافة</h2>
+            <div class="code-block"><pre><code>openclaw models status
+openclaw models list
+openclaw plugins list
+openclaw plugins doctor</code></pre></div>
+            <ul>
+              <li>إذا كان النموذج محجوبًا فقد تكون المشكلة في allowlist داخل <code>agents.defaults.models</code>.</li>
+              <li>إذا كانت الإضافة مثبتة لكنها لا تُحمّل فقد ينقصها manifest صالح أو config صحيح.</li>
+              <li>تذكّر أن الإضافات الأصلية تعمل داخل الـ gateway نفسه، لذلك قد تؤدي إضافة سيئة إلى زعزعة كامل النظام.</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>أدلة مرتبطة</h3>
+            <ul>
+              <li><a href="/ar/install-openclaw/">ثبّت OpenClaw</a></li>
+              <li><a href="/ar/openclaw-ollama/">OpenClaw مع Ollama</a></li>
+              <li><a href="/ar/openclaw-tools-plugins/">الأدوات والإضافات</a></li>
+              <li><a href="/ar/primo-agente-openclaw/">أول وكيل مفيد</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/ar/">الرئيسية</a> · <a href="/ar/openclaw-ollama/">OpenClaw مع Ollama</a></p>
+    </div>
+  </footer>
+</body>
+</html>

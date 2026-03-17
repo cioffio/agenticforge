@@ -94,6 +94,18 @@ const translations = {
     guide6Title: "Ready agents",
     guide6Body:
       "Concrete examples for support, research, reporting, and real operational workflows.",
+    guide7Title: "OpenClaw with Ollama",
+    guide7Body:
+      "How to use local models, avoid wrong config, and keep tool calling and discovery clean.",
+    guide8Title: "OpenClaw troubleshooting",
+    guide8Body:
+      "A practical checklist to understand whether the problem is in the gateway, dashboard, models, or plugins.",
+    guide9Title: "Tools and plugins",
+    guide9Body:
+      "When plugins help, how to install them, and how not to make setup heavier too early.",
+    guide10Title: "First useful agent",
+    guide10Body:
+      "The simplest path from successful installation to a workflow built around one real task.",
     stat1: "Session length based on package",
     stat2: "Operational Teams session",
     stat3: "Technical follow-up within 48h max",
@@ -420,6 +432,18 @@ const translations = {
     guide6Title: "Agenti pronti",
     guide6Body:
       "Esempi concreti di agenti per supporto, ricerca, reporting e workflow operativi reali.",
+    guide7Title: "OpenClaw con Ollama",
+    guide7Body:
+      "Come usare modelli locali, evitare config sbagliate e mantenere tool calling e discovery puliti.",
+    guide8Title: "Troubleshooting OpenClaw",
+    guide8Body:
+      "Checklist pratica per capire se il problema e in gateway, dashboard, modelli o plugin.",
+    guide9Title: "Tool e plugin",
+    guide9Body:
+      "Quando usare i plugin, come installarli e come non appesantire il setup troppo presto.",
+    guide10Title: "Primo agente utile",
+    guide10Body:
+      "Il percorso piu semplice per passare da installazione riuscita a workflow con un task reale.",
     stat1: "Durata sessione in base al pacchetto",
     stat2: "Sessione operativa su Teams",
     stat3: "Follow-up tecnico massimo entro 48h",
@@ -741,6 +765,18 @@ const translations = {
     guide6Title: "وكلاء جاهزون",
     guide6Body:
       "أمثلة عملية للدعم والبحث والتقارير ومسارات العمل التشغيلية الحقيقية.",
+    guide7Title: "OpenClaw مع Ollama",
+    guide7Body:
+      "كيف تستخدم النماذج المحلية وتتجنب الإعداد الخاطئ وتحافظ على الاكتشاف واستدعاء الأدوات بشكل سليم.",
+    guide8Title: "حل مشكلات OpenClaw",
+    guide8Body:
+      "قائمة عملية لتعرف هل المشكلة في الـ gateway أو الـ dashboard أو النماذج أو الإضافات.",
+    guide9Title: "الأدوات والإضافات",
+    guide9Body:
+      "متى تفيد الإضافات، وكيف تثبتها، وكيف لا تجعل الإعداد أثقل مبكرًا.",
+    guide10Title: "أول وكيل مفيد",
+    guide10Body:
+      "أبسط طريق للانتقال من تثبيت ناجح إلى workflow مبني حول مهمة حقيقية واحدة.",
     stat1: "مدة الجلسة حسب الباقة",
     stat2: "جلسة تشغيلية عبر Teams",
     stat3: "متابعة تقنية خلال 48 ساعة كحد أقصى",

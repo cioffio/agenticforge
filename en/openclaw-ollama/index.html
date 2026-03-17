@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>How to Configure OpenClaw with Ollama | Practical Guide</title>
+  <meta name="description" content="Practical guide to use OpenClaw with Ollama: local models, correct setup, auto-discovery, and the most common fixes." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/en/openclaw-ollama/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/openclaw-ollama/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/openclaw-ollama/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/openclaw-ollama/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/openclaw-ollama/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Configure OpenClaw with Ollama | Practical Guide" />
+  <meta property="og:description" content="Use OpenClaw with Ollama the right way: local models, auto-discovery, and essential troubleshooting." />
+  <meta property="og:url" content="https://agenticforge.live/en/openclaw-ollama/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Configure OpenClaw with Ollama | Practical Guide" />
+  <meta name="twitter:description" content="Use OpenClaw with Ollama the right way: local models, auto-discovery, and essential troubleshooting." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/en/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/en/install-openclaw/">Install guide</a>
+        <a class="btn btn-primary" href="/en/#book">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Ollama</p>
+        <h1 class="doc-title">How to configure OpenClaw with Ollama without breaking tools and local models</h1>
+        <p class="doc-intro">Ollama is one of the strongest options if you want to run local models with OpenClaw. The real goal is not only seeing a model appear in a list. The correct setup keeps tool calling working, model discovery clean, and the first useful agent on a stable base.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>The simplest flow</h2>
+            <ol>
+              <li>Install Ollama and make sure the local runtime is active.</li>
+              <li>Pull at least one model that makes sense for tools, for example:</li>
+            </ol>
+            <div class="code-block"><pre><code>ollama pull gpt-oss:20b
+ollama pull llama3.3
+ollama pull qwen2.5-coder:32b</code></pre></div>
+            <p>According to the official OpenClaw docs, the platform can auto-discover Ollama models when you enable the provider without defining a full explicit model configuration.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>Correct setup for auto-discovery</h2>
+            <p>The cleanest route is setting any value for <code>OLLAMA_API_KEY</code> and then letting OpenClaw discover models from the local runtime.</p>
+            <div class="code-block"><pre><code>export OLLAMA_API_KEY="ollama-local"
+ollama list
+openclaw models list</code></pre></div>
+            <p>If models appear, OpenClaw is seeing the local provider and you can choose the one that fits your workflow.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>The mistake worth avoiding</h2>
+            <p>If Ollama runs on a remote or custom host, do not use the OpenAI-compatible endpoint with <code>/v1</code>. The official docs warn that tool calling can break and tool JSON may be returned as plain text instead of real tool execution.</p>
+            <div class="code-block"><pre><code>baseUrl: "http://host:11434"</code></pre></div>
+            <p>Not:</p>
+            <div class="code-block"><pre><code>baseUrl: "http://host:11434/v1"</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>If Ollama is not detected</h2>
+            <div class="code-block"><pre><code>ollama serve
+curl http://localhost:11434/api/tags
+openclaw models list</code></pre></div>
+            <ul>
+              <li>If <code>/api/tags</code> does not answer, the issue is Ollama before OpenClaw.</li>
+              <li>If Ollama answers but OpenClaw sees no models, check for an old explicit config under <code>models.providers.ollama</code>.</li>
+              <li>If only a few models appear, the chosen model may not expose tool support well enough for the workflow you want.</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Connected steps</h3>
+            <ul>
+              <li><a href="/en/install-openclaw/">Install OpenClaw</a></li>
+              <li><a href="/en/primo-agente-openclaw/">Build the first agent</a></li>
+              <li><a href="/en/openclaw-tools-plugins/">Connect tools and plugins</a></li>
+              <li><a href="/en/troubleshooting-openclaw/">OpenClaw troubleshooting</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/en/">Home</a> · <a href="/en/openclaw-tools-plugins/">Tools and plugins</a></p>
+    </div>
+  </footer>
+</body>
+</html>

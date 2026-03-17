@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>كيفية إعداد OpenClaw مع Ollama | دليل عملي</title>
+  <meta name="description" content="دليل عملي لاستخدام OpenClaw مع Ollama: النماذج المحلية، الإعداد الصحيح، الاكتشاف التلقائي، وأشهر الإصلاحات." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/ar/openclaw-ollama/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/openclaw-ollama/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/openclaw-ollama/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/openclaw-ollama/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/openclaw-ollama/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="كيفية إعداد OpenClaw مع Ollama | دليل عملي" />
+  <meta property="og:description" content="استخدم OpenClaw مع Ollama بالشكل الصحيح: نماذج محلية واكتشاف تلقائي وحل مشكلات أساسي." />
+  <meta property="og:url" content="https://agenticforge.live/ar/openclaw-ollama/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="كيفية إعداد OpenClaw مع Ollama | دليل عملي" />
+  <meta name="twitter:description" content="استخدم OpenClaw مع Ollama بالشكل الصحيح: نماذج محلية واكتشاف تلقائي وحل مشكلات أساسي." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/ar/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">إعداد OpenClaw وأدلته والوكلاء الجاهزون</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/ar/install-openclaw/">دليل التثبيت</a>
+        <a class="btn btn-primary" href="/ar/#book">احجز الإعداد</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Ollama</p>
+        <h1 class="doc-title">كيفية إعداد OpenClaw مع Ollama من دون كسر الأدوات أو النماذج</h1>
+        <p class="doc-intro">Ollama من أفضل الخيارات إذا أردت تشغيل نماذج محلية مع OpenClaw. لكن الهدف الحقيقي ليس فقط أن يظهر النموذج في القائمة، بل أن يبقى استدعاء الأدوات سليمًا وأن يكتشف OpenClaw النماذج بشكل نظيف وأن يبدأ أول وكيل على قاعدة مستقرة.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>أبسط مسار</h2>
+            <ol>
+              <li>ثبّت Ollama وتأكد أن الـ runtime المحلي يعمل.</li>
+              <li>اسحب نموذجًا واحدًا على الأقل مناسبًا للأدوات، مثل:</li>
+            </ol>
+            <div class="code-block"><pre><code>ollama pull gpt-oss:20b
+ollama pull llama3.3
+ollama pull qwen2.5-coder:32b</code></pre></div>
+            <p>بحسب وثائق OpenClaw الرسمية يمكن للنظام اكتشاف نماذج Ollama تلقائيًا عندما تفعّل المزوّد من دون تعريف تكوين صريح كامل.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>الإعداد الصحيح للاكتشاف التلقائي</h2>
+            <p>الطريق الأنظف هو وضع أي قيمة في <code>OLLAMA_API_KEY</code> ثم ترك OpenClaw يكتشف النماذج من الـ runtime المحلي.</p>
+            <div class="code-block"><pre><code>export OLLAMA_API_KEY="ollama-local"
+ollama list
+openclaw models list</code></pre></div>
+            <p>إذا ظهرت النماذج فمعناه أن OpenClaw يرى المزوّد المحلي ويمكنك بعدها اختيار ما يناسب workflow الخاص بك.</p>
+          </div>
+
+          <div class="doc-block">
+            <h2>الخطأ الذي يجب تجنبه</h2>
+            <p>إذا كان Ollama يعمل على host بعيد أو مخصص، لا تستخدم endpoint المتوافق مع OpenAI والمرفق بـ <code>/v1</code>. الوثائق الرسمية تنبه إلى أن استدعاء الأدوات قد ينكسر وأن JSON الخاص بالأدوات قد يعود كنص فقط بدل التنفيذ الحقيقي.</p>
+            <div class="code-block"><pre><code>baseUrl: "http://host:11434"</code></pre></div>
+            <p>وليس:</p>
+            <div class="code-block"><pre><code>baseUrl: "http://host:11434/v1"</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>إذا لم يتم اكتشاف Ollama</h2>
+            <div class="code-block"><pre><code>ollama serve
+curl http://localhost:11434/api/tags
+openclaw models list</code></pre></div>
+            <ul>
+              <li>إذا لم يستجب <code>/api/tags</code> فالمشكلة في Ollama قبل OpenClaw.</li>
+              <li>إذا كان Ollama يرد لكن OpenClaw لا يرى النماذج، فتحقق من عدم وجود إعداد قديم وصريح داخل <code>models.providers.ollama</code>.</li>
+              <li>إذا ظهرت نماذج قليلة فقط، فغالبًا النموذج المختار لا يدعم الأدوات بالشكل المناسب.</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>خطوات مرتبطة</h3>
+            <ul>
+              <li><a href="/ar/install-openclaw/">ثبّت OpenClaw</a></li>
+              <li><a href="/ar/primo-agente-openclaw/">ابنِ الوكيل الأول</a></li>
+              <li><a href="/ar/openclaw-tools-plugins/">اربط الأدوات والإضافات</a></li>
+              <li><a href="/ar/troubleshooting-openclaw/">حل مشكلات OpenClaw</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/ar/">الرئيسية</a> · <a href="/ar/openclaw-tools-plugins/">الأدوات والإضافات</a></p>
+    </div>
+  </footer>
+</body>
+</html>
