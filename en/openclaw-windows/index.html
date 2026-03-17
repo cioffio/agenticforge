@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>OpenClaw on Windows | Guided Installation</title>
+  <meta name="description" content="How to install OpenClaw on Windows with the recommended WSL2 path, the PowerShell alternative, and the first checks after setup." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/en/openclaw-windows/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/openclaw-windows/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/openclaw-windows/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/openclaw-windows/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/openclaw-windows/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OpenClaw on Windows | Guided Installation" />
+  <meta property="og:description" content="WSL2 path, official commands, and first steps to use OpenClaw on Windows." />
+  <meta property="og:url" content="https://agenticforge.live/en/openclaw-windows/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OpenClaw on Windows | Guided Installation" />
+  <meta name="twitter:description" content="WSL2 path, official commands, and first steps to use OpenClaw on Windows." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/en/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/en/install-openclaw/">Main guide</a>
+        <a class="btn btn-primary" href="/en/#book">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Windows</p>
+        <h1 class="doc-title">How to install OpenClaw on Windows without making it harder than it needs to be</h1>
+        <p class="doc-intro">The official documentation recommends using OpenClaw on Windows through WSL2. That avoids many native setup incompatibilities and keeps the flow closer to the Linux environment most docs assume.</p>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>Recommended route: WSL2</h2>
+            <p>If you start from zero, install WSL2 with Ubuntu and work inside that shell. Then run the official script:</p>
+            <div class="code-block"><pre><code>curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash
+openclaw onboard --install-daemon
+openclaw dashboard</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Alternative route: native PowerShell</h2>
+            <p>If you want to test the native Windows setup, the official PowerShell command is:</p>
+            <p>It can work for quick tests, but WSL2 remains the more reliable choice for real usage.</p>
+            <div class="code-block"><pre><code>iwr -useb https://openclaw.ai/install.ps1 | iex</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Right after installation</h2>
+            <ul>
+              <li>Run guided onboarding.</li>
+              <li>Open the dashboard to test chat and UI control.</li>
+              <li>If something looks wrong, move into a cleaner WSL2 setup instead of stacking workarounds in PowerShell.</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Useful links</h3>
+            <ul>
+              <li><a href="/en/install-openclaw/">General install guide</a></li>
+              <li><a href="/en/openclaw-macos/">macOS guide</a></li>
+              <li><a href="/en/openclaw-linux/">Linux guide</a></li>
+              <li><a href="/en/installare-agenti/">Install agents</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/en/">Home</a> · <a href="/en/install-openclaw/">Install guide</a></p>
+    </div>
+  </footer>
+</body>
+</html>

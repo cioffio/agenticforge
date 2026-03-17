@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>OpenClaw on macOS | Guided Installation</title>
+  <meta name="description" content="Practical guide to install OpenClaw on macOS with the official script, onboarding, and the first useful checks." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/en/openclaw-macos/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/openclaw-macos/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/openclaw-macos/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/openclaw-macos/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/openclaw-macos/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="OpenClaw on macOS | Guided Installation" />
+  <meta property="og:description" content="Official script, onboarding, and first steps to use OpenClaw on macOS." />
+  <meta property="og:url" content="https://agenticforge.live/en/openclaw-macos/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OpenClaw on macOS | Guided Installation" />
+  <meta name="twitter:description" content="Official script, onboarding, and first steps to use OpenClaw on macOS." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/en/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/en/install-openclaw/">Main guide</a>
+        <a class="btn btn-primary" href="/en/#book">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">macOS</p>
+        <h1 class="doc-title">How to install OpenClaw on macOS</h1>
+        <p class="doc-intro">On macOS the simplest route is still the official script. If you want to reach the first chat quickly and then move to a useful agent, the right flow is installation, onboarding, and a final dashboard check.</p>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>Official command</h2>
+            <p>The script handles installation and basic prerequisites. It is the most direct choice if you want to avoid fragmented setup.</p>
+            <div class="code-block"><pre><code>curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Next steps</h2>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw dashboard</code></pre></div>
+            <ul>
+              <li>Onboarding configures the first settings in a guided way.</li>
+              <li>The dashboard lets you confirm immediately that the system responds.</li>
+              <li>From there you can add agents, plugins, and tools that matter to your workflow.</li>
+            </ul>
+          </div>
+
+          <div class="doc-block">
+            <h2>When this guide is enough and when it is not</h2>
+            <p>If you only want to install OpenClaw and reach a first chat, this page is enough. If you also want to connect models, permissions, plugins, or a ready-to-use agent, it makes sense to move to a fuller guided configuration.</p>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Connected guides</h3>
+            <ul>
+              <li><a href="/en/install-openclaw/">General install guide</a></li>
+              <li><a href="/en/openclaw-linux/">Linux guide</a></li>
+              <li><a href="/en/installare-agenti/">How to install agents</a></li>
+              <li><a href="/en/agenti-pronti/">Ready agents</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/en/">Home</a> · <a href="/en/install-openclaw/">Install guide</a></p>
+    </div>
+  </footer>
+</body>
+</html>

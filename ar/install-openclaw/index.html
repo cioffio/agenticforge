@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>كيفية تثبيت OpenClaw | دليل عملي</title>
+  <meta name="description" content="دليل عملي لتثبيت OpenClaw على Windows و macOS و Linux باستخدام الأوامر الرسمية وخطوات البدء والفحوصات الأولى." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/ar/install-openclaw/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/install-openclaw/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/install-openclaw/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/install-openclaw/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/install-openclaw/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="كيفية تثبيت OpenClaw | دليل عملي" />
+  <meta property="og:description" content="تثبيت OpenClaw وخطوات البدء الأولى وروابط سريعة لأنظمة Windows و macOS و Linux." />
+  <meta property="og:url" content="https://agenticforge.live/ar/install-openclaw/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="كيفية تثبيت OpenClaw | دليل عملي" />
+  <meta name="twitter:description" content="تثبيت OpenClaw وخطوات البدء الأولى وروابط سريعة لأنظمة Windows و macOS و Linux." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/ar/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">إعداد OpenClaw وأدلته والوكلاء الجاهزون</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/ar/">العودة إلى الرئيسية</a>
+        <a class="btn btn-primary" href="/ar/#book">احجز الإعداد</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">دليل عملي</p>
+        <h1 class="doc-title">كيفية تثبيت OpenClaw والوصول إلى أول وكيل يعمل</h1>
+        <p class="doc-intro">هذا هو الدليل الأساسي. يعطيك أبسط مسار لتثبيت OpenClaw وإكمال أول خطوات البدء والوصول إلى بيئة جاهزة على Windows أو macOS أو Linux من دون الضياع بين أوامر متفرقة وإعدادات ناقصة.</p>
+        <div class="doc-actions">
+          <a class="btn btn-primary" href="/ar/openclaw-windows/">دليل Windows</a>
+          <a class="btn btn-ghost" href="/ar/openclaw-macos/">دليل macOS</a>
+          <a class="btn btn-ghost" href="/ar/openclaw-linux/">دليل Linux</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>أبسط مسار في 3 خطوات</h2>
+            <ol>
+              <li>ثبّت OpenClaw باستخدام السكربت الرسمي المناسب لنظامك.</li>
+              <li>شغّل الإعداد الموجّه لضبط الـ gateway والإعدادات الأساسية.</li>
+              <li>افتح لوحة التحكم وتأكد من أن أول وكيل يرد فعلاً.</li>
+            </ol>
+          </div>
+
+          <div class="doc-block">
+            <h2>الأوامر الرسمية التي يجدر البدء منها</h2>
+            <p>macOS و Linux و WSL2</p>
+            <div class="code-block"><pre><code>curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash</code></pre></div>
+            <div class="code-block"><pre><code>iwr -useb https://openclaw.ai/install.ps1 | iex</code></pre></div>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw dashboard</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>أي دليل تفتح بعد ذلك</h2>
+            <p>إذا كان هدفك ليس فقط تثبيت OpenClaw بل أيضًا تشغيل workflow مفيد، فالخطوة التالية هي ضبط الوكلاء والإضافات والأدوات بشكل مقصود.</p>
+            <ul>
+              <li>إذا كنت على Windows فالمسار الأكثر استقرارًا هو WSL2.</li>
+              <li>إذا كنت على Mac فالسكريبت الرسمي هو أسرع طريق.</li>
+              <li>إذا كنت على Linux فالسكريبت نفسه يبقى أنظف نقطة بداية.</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>انتقل مباشرة إلى</h3>
+            <ul>
+              <li><a href="/ar/openclaw-windows/">OpenClaw على Windows</a></li>
+              <li><a href="/ar/openclaw-macos/">OpenClaw على macOS</a></li>
+              <li><a href="/ar/openclaw-linux/">OpenClaw على Linux</a></li>
+              <li><a href="/ar/installare-agenti/">كيفية تثبيت الوكلاء</a></li>
+              <li><a href="/ar/agenti-pronti/">وكلاء جاهزون</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/ar/">الرئيسية</a> · <a href="/ar/#book">احجز الإعداد</a></p>
+    </div>
+  </footer>
+</body>
+</html>

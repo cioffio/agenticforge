@@ -1,0 +1,640 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-fixed-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>AgentForge Setup | Install OpenClaw, Guides, And Ready Agents</title>
+  <meta name="description" content="Install OpenClaw in a practical way with guides for Windows, macOS, and Linux, plus troubleshooting and ready agents." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#08121d" />
+  <link rel="canonical" href="https://agenticforge.live/en/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AgentForge" />
+  <meta property="og:title" content="AgentForge Setup | Install OpenClaw, Guides, And Ready Agents" />
+  <meta property="og:description" content="Install OpenClaw in a practical way with guides for Windows, macOS, and Linux, plus troubleshooting and ready agents." />
+  <meta property="og:url" content="https://agenticforge.live/en/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AgentForge Setup | Install OpenClaw, Guides, And Ready Agents" />
+  <meta name="twitter:description" content="Install OpenClaw in a practical way with guides for Windows, macOS, and Linux, plus troubleshooting and ready agents." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "AgentForge",
+      "url": "https://agenticforge.live/en/",
+      "email": "agenticforge@libero.it",
+      "description": "Install OpenClaw in a practical way with guides for Windows, macOS, and Linux, plus troubleshooting and ready agents.",
+      "areaServed": "International",
+      "availableLanguage": ["it", "en", "ar"],
+      "sameAs": []
+    }
+  </script>
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub" data-i18n="brandSub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#why" data-i18n="navWhy">Why now</a>
+        <a href="#offer" data-i18n="navOffer">What you get</a>
+        <a href="#process" data-i18n="navProcess">Process</a>
+        <a href="#pricing" data-i18n="navPricing">Packages</a>
+        <a href="#advisory" data-i18n="navAdvisory">After setup</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button class="lang-btn active" data-lang="en" data-lang-path="/en/">EN</button>
+          <button class="lang-btn" data-lang="it" data-lang-path="/">IT</button>
+          <button class="lang-btn" data-lang="ar" data-lang-path="/ar/">AR</button>
+        </div>
+        <a class="btn btn-primary" href="#book" data-i18n="navCta">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="heroEyebrow">AgentForge Setup for OpenClaw</p>
+          <h1 data-i18n="heroTitle">Use OpenClaw without losing hours to setup and configuration.</h1>
+          <p class="hero-sub" data-i18n="heroSub">Practical installation, models, tools, and a first working agent on Windows, macOS, and Linux, in one guided Teams session.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quickstart" data-i18n="heroCtaPrimary">Start here</a>
+            <a class="btn btn-ghost" href="#book" data-i18n="heroCtaSecondary">Book the setup</a>
+          </div>
+          <ul class="hero-bullets">
+            <li data-i18n="heroBullet1">Guided installation on Windows, macOS, and Linux</li>
+            <li data-i18n="heroBullet2">Connect local or cloud models</li>
+            <li data-i18n="heroBullet3">Tools, skills, and permissions set up properly</li>
+            <li data-i18n="heroBullet4">Real troubleshooting until the first useful workflow works</li>
+          </ul>
+        </div>
+
+        <div class="hero-side">
+          <aside class="hero-panel reveal">
+            <div class="panel-head">
+              <p data-i18n="panelTitle">Session snapshot</p>
+              <span class="status-dot">LIVE</span>
+            </div>
+            <ol class="panel-list">
+              <li><span data-i18n="panelStep1Title">Initial check</span><small data-i18n="panelStep1Body">Verify system, accounts, and prerequisites</small></li>
+              <li><span data-i18n="panelStep2Title">Install OpenClaw</span><small data-i18n="panelStep2Body">Guided setup without getting stuck in config or terminal</small></li>
+              <li><span data-i18n="panelStep3Title">Connect models and tools</span><small data-i18n="panelStep3Body">Providers, skills, and integrations matched to your use case</small></li>
+              <li><span data-i18n="panelStep4Title">Launch the first agent</span><small data-i18n="panelStep4Body">Final test, checklist, and next steps</small></li>
+            </ol>
+          </aside>
+
+          <figure class="hero-illustration reveal">
+            <img src="/robot-comic.svg" alt="Comic-style robot illustration" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="quickstart" class="section quickstart">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="quickEyebrow">Where to start</p>
+          <h2 data-i18n="quickTitle">Three clear steps to reach your first agent without confusion.</h2>
+          <p data-i18n="quickIntro">First you install OpenClaw, then you connect models and tools, and finally you launch a useful workflow.</p>
+        </div>
+
+        <div class="quickstart-grid">
+          <article class="quick-card reveal">
+            <span class="quick-index">01</span>
+            <h3 data-i18n="quick1Title">Install OpenClaw</h3>
+            <p data-i18n="quick1Body">We prepare the environment, dependencies, and base configuration cleanly, without unnecessary blockers.</p>
+          </article>
+          <article class="quick-card reveal">
+            <span class="quick-index">02</span>
+            <h3 data-i18n="quick2Title">Connect models and tools</h3>
+            <p data-i18n="quick2Body">We choose the provider, APIs, skills, and integrations that fit your real use case, not a generic demo.</p>
+          </article>
+          <article class="quick-card reveal">
+            <span class="quick-index">03</span>
+            <h3 data-i18n="quick3Title">Launch the first agent</h3>
+            <p data-i18n="quick3Body">We finish with a concrete task, a final test, and a clear checklist so you can continue without depending on us.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section workflow">
+      <div class="container">
+        <div class="workflow-shell reveal">
+          <div class="workflow-copy">
+            <p class="eyebrow" data-i18n="workflowEyebrow">From zero to working in 15 minutes</p>
+            <h2 data-i18n="workflowTitle">See the path before you even book.</h2>
+            <p data-i18n="workflowBody">Install OpenClaw, choose the model, connect tools and skills, then launch the first agent. No vague theory: we start from a concrete flow.</p>
+          </div>
+
+          <ol class="workflow-track">
+            <li class="workflow-node">
+              <span class="workflow-step-index">01</span>
+              <strong data-i18n="workflowStep1">Install</strong>
+              <small data-i18n="workflowStep1Body">Clean setup and prerequisites ready</small>
+            </li>
+            <li class="workflow-node">
+              <span class="workflow-step-index">02</span>
+              <strong data-i18n="workflowStep2">Choose</strong>
+              <small data-i18n="workflowStep2Body">Provider and model matched to your case</small>
+            </li>
+            <li class="workflow-node">
+              <span class="workflow-step-index">03</span>
+              <strong data-i18n="workflowStep3">Connect</strong>
+              <small data-i18n="workflowStep3Body">Tools, skills, and permissions set with intent</small>
+            </li>
+            <li class="workflow-node">
+              <span class="workflow-step-index">04</span>
+              <strong data-i18n="workflowStep4">Launch</strong>
+              <small data-i18n="workflowStep4Body">First agent tested on a useful task</small>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="commandEyebrow">Real commands</p>
+          <h2 data-i18n="commandTitle">If you want to start now, these are the official commands worth showing first.</h2>
+          <p data-i18n="commandBody">People landing here want installation, onboarding, and a first operational check, not abstract promises.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="cmd1Title">macOS, Linux, and WSL2</h3>
+            <div class="code-block"><pre><code>curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash</code></pre></div>
+            <p data-i18n="cmd1Body">The official script is the cleanest starting point for macOS, Linux, and Windows through WSL2.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="cmd2Title">Windows PowerShell</h3>
+            <div class="code-block"><pre><code>iwr -useb https://openclaw.ai/install.ps1 | iex</code></pre></div>
+            <p data-i18n="cmd2Body">You can also use PowerShell on Windows, but WSL2 is often the more stable path for a serious setup.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="cmd3Title">After installation</h3>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw dashboard</code></pre></div>
+            <p data-i18n="cmd3Body">This is where the real difference starts: correct onboarding and a final check before tools and agents.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats">
+      <div class="container stats-grid reveal">
+        <article class="stat-card">
+          <p class="stat-value">30-90 min</p>
+          <p class="stat-label" data-i18n="stat1">Session length based on package</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-value">1:1</p>
+          <p class="stat-label" data-i18n="stat2">Operational Teams session</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-value">48h</p>
+          <p class="stat-label" data-i18n="stat3">Technical follow-up within 48h max</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-value">+Starter Kit</p>
+          <p class="stat-label" data-i18n="stat4">Checklist, commands, and prompt pack included</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="guidesEyebrow">Practical guides</p>
+          <h2 data-i18n="guidesTitle">The first pages worth reading if you want to start using OpenClaw in a practical way.</h2>
+          <p data-i18n="guidesBody">These guides target real questions: installation, operating system, agents, and first concrete use cases.</p>
+        </div>
+
+        <div class="feature-grid">
+          <a class="feature-card reveal" href="/en/install-openclaw/">
+            <h3 data-i18n="guide1Title">Install OpenClaw</h3>
+            <p data-i18n="guide1Body">Main guide with official commands, initial onboarding, and quick links for every system.</p>
+          </a>
+          <a class="feature-card reveal" href="/en/openclaw-windows/">
+            <h3 data-i18n="guide2Title">OpenClaw on Windows</h3>
+            <p data-i18n="guide2Body">Recommended WSL2 path, PowerShell alternative, and useful checks right after setup.</p>
+          </a>
+          <a class="feature-card reveal" href="/en/openclaw-macos/">
+            <h3 data-i18n="guide3Title">OpenClaw on macOS</h3>
+            <p data-i18n="guide3Body">Official script, onboarding, and first steps to reach a clean working base quickly.</p>
+          </a>
+          <a class="feature-card reveal" href="/en/openclaw-linux/">
+            <h3 data-i18n="guide4Title">OpenClaw on Linux</h3>
+            <p data-i18n="guide4Body">Official installation, dashboard check, and fast transition toward tools and agents.</p>
+          </a>
+          <a class="feature-card reveal" href="/en/installare-agenti/">
+            <h3 data-i18n="guide5Title">Install agents</h3>
+            <p data-i18n="guide5Body">How to move from OpenClaw installed to a first useful agent with plugins and minimal configuration.</p>
+          </a>
+          <a class="feature-card reveal" href="/en/agenti-pronti/">
+            <h3 data-i18n="guide6Title">Ready agents</h3>
+            <p data-i18n="guide6Body">Concrete examples for support, research, reporting, and real operational workflows.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container two-col">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="aboutEyebrow">Why AgentForge Setup</p>
+          <h2 data-i18n="aboutTitle">This is not agent hype. It is a practical path from installation to real usage.</h2>
+          <p data-i18n="aboutBody1">The site is intentionally operational: installation, providers, tools, permissions, ready agents, and troubleshooting. The goal is not explaining the future of agents, but helping you use OpenClaw without unnecessary friction.</p>
+          <p data-i18n="aboutBody2">When needed, the hands-on session helps you move faster through the parts that break most often: unstable setup, wrong model choice, useless plugins, or agents that never produce a concrete task.</p>
+        </div>
+        <div class="risk-panel reveal">
+          <h3 data-i18n="aboutPanelTitle">What you get here</h3>
+          <ul>
+            <li data-i18n="aboutPoint1">Practical guides instead of generic marketing</li>
+            <li data-i18n="aboutPoint2">Real commands, not only concepts</li>
+            <li data-i18n="aboutPoint3">Setup, agents, and troubleshooting in one flow</li>
+            <li data-i18n="aboutPoint4">A clear path from zero to ready-to-use</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="container two-col">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="whyEyebrow">Why act now</p>
+          <h2 data-i18n="whyTitle">The real problem is not discovering OpenClaw exists, but getting it to work properly on the first try.</h2>
+          <p data-i18n="whyBody">The issue is not awareness. The issue is installing OpenClaw, choosing the right model, connecting the right tools, and knowing what to do when something breaks. We reduce technical and decision friction so you can move from zero to a first working agent.</p>
+        </div>
+        <div class="risk-panel reveal">
+          <h3 data-i18n="riskTitle">The friction you remove immediately</h3>
+          <ul>
+            <li data-i18n="risk1">Setup that gets stuck between terminal commands, dependencies, and permissions</li>
+            <li data-i18n="risk2">Confusion around providers, API keys, and local versus cloud models</li>
+            <li data-i18n="risk3">Tools and skills added without a clear plan or with excessive access</li>
+            <li data-i18n="risk4">Agents that launch badly or never become useful for real tasks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="offer" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="offerEyebrow">What you leave with</p>
+          <h2 data-i18n="offerTitle">We reduce friction at the 6 points that block almost everyone at the start.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="feat1Title">Installation without dead ends</h3>
+            <p data-i18n="feat1Body">We prepare the environment, dependencies, and initial configuration in a clean way so you do not waste time on basic but blocking errors.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="feat2Title">Right model and provider</h3>
+            <p data-i18n="feat2Body">You understand which provider to connect, when to use cloud or local models, and which setup fits your budget and use case.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="feat3Title">Tools and skills ready</h3>
+            <p data-i18n="feat3Body">We connect only the tools that matter, with skills and integrations that help the first workflow instead of making the setup heavier.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="feat4Title">Minimum security and permissions</h3>
+            <p data-i18n="feat4Body">We set basic access rules, segmentation, and safeguards to avoid risky mistakes from the first operational tests.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="feat5Title">First useful agent</h3>
+            <p data-i18n="feat5Body">We do not leave you with a theoretical setup: we define one agent with a clear task, starter prompt, and real validation.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="feat6Title">Troubleshooting and next steps</h3>
+            <p data-i18n="feat6Body">If something breaks, we fix the critical point and you end the session with a checklist and a clear direction forward.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="agentsEyebrow">Ready-to-use agents</p>
+          <h2 data-i18n="agentsTitle">The most useful examples are not abstract AI agents, but workflows you can actually start using.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="agent1Title">Email agent</h3>
+            <p data-i18n="agent1Body">Reads context, drafts replies, filters repetitive requests, and leaves only important cases to a human.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="agent2Title">Calendar and follow-up agent</h3>
+            <p data-i18n="agent2Body">Keeps reminders, follow-ups, and next steps organized so operational continuity does not break.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="agent3Title">Web research agent</h3>
+            <p data-i18n="agent3Body">Finds sources, summarizes results, and prepares usable notes instead of leaving you with chaotic tabs.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="agent4Title">Local agent with Ollama</h3>
+            <p data-i18n="agent4Body">If you want a more local or controlled setup, you can start from local models and evolve the workflow from there.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="agent5Title">Self-hosted agent</h3>
+            <p data-i18n="agent5Body">For more structured cases, you can bring OpenClaw into controlled environments and aim for a steadier deployment.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="agent6Title">Reporting ops agent</h3>
+            <p data-i18n="agent6Body">Collects recurring data, prepares updates, and helps keep operational workflows in order.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="processEyebrow">Operational path</p>
+          <h2 data-i18n="processTitle">We take you from zero to a first working agent in 4 steps.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="step reveal">
+            <span class="step-index">01</span>
+            <h3 data-i18n="step1Title">Starting-point check</h3>
+            <p data-i18n="step1Body">We map devices, technical level, goal, and constraints so we can choose a realistic setup immediately.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-index">02</span>
+            <h3 data-i18n="step2Title">Installation and configuration</h3>
+            <p data-i18n="step2Body">We do the live setup, fix errors, and prepare the environment so you can work without unnecessary friction.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-index">03</span>
+            <h3 data-i18n="step3Title">Connect models, tools, and skills</h3>
+            <p data-i18n="step3Body">We choose providers, permissions, and useful integrations to build a first workflow that makes sense.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-index">04</span>
+            <h3 data-i18n="step4Title">Final test and troubleshooting</h3>
+            <p data-i18n="step4Body">We validate the first agent, fix the remaining blockers, and close with a checklist and practical next steps.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="pricingEyebrow">Sessions and packages</p>
+          <h2 data-i18n="pricingTitle">Choose whether you need installation, ready-to-use setup, or troubleshooting.</h2>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <h3 data-i18n="plan1Name">Quick Setup</h3>
+            <p class="price" data-i18n="plan1Price">€25</p>
+            <p class="price-time" data-i18n="plan1Time">30 minutes</p>
+            <ul>
+              <li data-i18n="plan1Feat1">Guided OpenClaw installation</li>
+              <li data-i18n="plan1Feat2">Provider or model check</li>
+              <li data-i18n="plan1Feat3">Ready initial checklist</li>
+            </ul>
+            <a href="#book" class="btn btn-ghost" data-i18n="planBtn">Book now</a>
+          </article>
+
+          <article class="price-card featured reveal">
+            <p class="badge" data-i18n="planFeatured">Most useful</p>
+            <h3 data-i18n="plan2Name">Ready To Use</h3>
+            <p class="price" data-i18n="plan2Price">To agree</p>
+            <p class="price-time" data-i18n="plan2Time">60 minutes</p>
+            <ul>
+              <li data-i18n="plan2Feat1">Complete setup to first workflow</li>
+              <li data-i18n="plan2Feat2">Tools and skills ready</li>
+              <li data-i18n="plan2Feat3">1 validated operational agent</li>
+            </ul>
+            <a href="#book" class="btn btn-primary" data-i18n="planBtn">Book now</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3 data-i18n="plan3Name">Troubleshooting Lab</h3>
+            <p class="price" data-i18n="plan3Price">To agree</p>
+            <p class="price-time" data-i18n="plan3Time">90 minutes</p>
+            <ul>
+              <li data-i18n="plan3Feat1">Diagnosis of a broken or unstable setup</li>
+              <li data-i18n="plan3Feat2">Fixes for tools, models, plugins, or permissions</li>
+              <li data-i18n="plan3Feat3">Clean plan to restart from a stable base</li>
+            </ul>
+            <a href="#book" class="btn btn-ghost" data-i18n="planBtn">Book now</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="advisory" class="section advisory">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="advisoryEyebrow">Beyond installation</p>
+          <h2 data-i18n="advisoryTitle">Once OpenClaw really runs, the session can become a review of workflows, agents, and deployment choices.</h2>
+          <p data-i18n="advisoryBody">After setup, the goal is not adding complexity at random. The goal is deciding which use cases make sense, which channels to use, which agents should really live, and which ideas should be dropped.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="adv1Title">Idea Review</h3>
+            <p data-i18n="adv1Body">We analyze your agent idea and determine whether it has real operational value, where it breaks, and which data it actually needs.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="adv2Title">Agent Improvement</h3>
+            <p data-i18n="adv2Body">We review existing agents to improve reliability, precision, cost-benefit, and execution quality.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="adv3Title">Channel Strategy</h3>
+            <p data-i18n="adv3Body">We decide where the agent should live: Telegram, web dashboard, email, back office, or internal workflows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="troubleEyebrow">Troubleshooting</p>
+          <h2 data-i18n="troubleTitle">When something breaks, the value is knowing where to put your hands first.</h2>
+          <p class="disclaimer" data-i18n="troubleBody">These are the most common blockers worth surfacing directly on the homepage.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="tr1Title">The command does not run</h3>
+            <p data-i18n="tr1Body">When OpenClaw is not recognized or the install stops, the issue is usually path or prerequisites.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="tr2Title">Windows or WSL2?</h3>
+            <p data-i18n="tr2Body">Many start in PowerShell and only later realize WSL2 makes the whole setup cleaner and more predictable.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="tr3Title">The model answers badly</h3>
+            <p data-i18n="tr3Body">Often the problem is not OpenClaw itself, but a poor choice of provider, model, or local versus cloud configuration.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="tr4Title">Tools and permissions are messy</h3>
+            <p data-i18n="tr4Body">If you connect too many tools or give overly broad access, the setup becomes fragile before it becomes useful.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="tr5Title">The agent does not do a real task</h3>
+            <p data-i18n="tr5Body">This usually happens when the prompt is vague or the agent role is not tied to a concrete workflow.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="tr6Title">Dashboard or gateway looks wrong</h3>
+            <p data-i18n="tr6Body">If onboarding was done badly or the daemon is unstable, fix that before adding anything else.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact channels</p>
+          <h2 data-i18n="contactTitle">Write for setup, troubleshooting, or your first ready-to-use agent.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3 data-i18n="contact1Title">Teams</h3>
+            <p data-i18n="contact1Body">Best for operational sessions, live installation, and technical reviews with screen sharing.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="contact2Title">Telegram</h3>
+            <p data-i18n="contact2Body">Useful for quick follow-ups, sending notes, prompts, and asynchronous coordination during development.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3 data-i18n="contact3Title">Email</h3>
+            <p data-i18n="contact3Body">Ideal for sending initial briefs, documents, use cases, and more detailed quote requests.</p>
+            <p class="contact-email"><a href="mailto:agenticforge@libero.it" data-i18n="contactEmail">agenticforge@libero.it</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container faq-wrap reveal">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="faqEyebrow">Quick FAQ</p>
+          <h2 data-i18n="faqTitle">The practical questions people ask before starting.</h2>
+        </div>
+
+        <details>
+          <summary data-i18n="faq1Q">Do I already need technical experience?</summary>
+          <p data-i18n="faq1A">No. The flow is also designed for people who do not want to get stuck in terminals, dependencies, and scattered configuration.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq2Q">Can I use local models like Ollama?</summary>
+          <p data-i18n="faq2A">Yes, when the use case calls for it. The real point is deciding whether local or cloud makes more sense for your goal and environment.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq3Q">Can you help if the setup breaks?</summary>
+          <p data-i18n="faq3A">Yes. A big part of the work is identifying where the flow broke and bringing it back to a stable base.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq4Q">Can I start from Windows, macOS, or Linux?</summary>
+          <p data-i18n="faq4A">Yes. The site already includes guides for all three, with WSL2 as a useful option on Windows.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="book" class="section cta">
+      <div class="container cta-grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="bookEyebrow">Book your setup</p>
+          <h2 data-i18n="bookTitle">Bring OpenClaw from installed to useful with a focused Teams session.</h2>
+          <p data-i18n="bookSub">Fill in your details and receive a proposed time within 24 business hours.</p>
+          <a class="btn btn-primary" href="mailto:agenticforge@libero.it?subject=AgentForge%20Setup%20Request" data-i18n="bookTeams" data-i18n-href="bookTeamsHref">Write by email</a>
+        </div>
+
+        <form class="lead-form reveal" id="leadForm" action="https://formsubmit.co/3996b99aa15d0cc3df6707d5ed29345d" method="POST">
+          <input type="hidden" name="_subject" value="New AgentForge setup request" data-i18n-value="formSubject" />
+          <input type="hidden" name="_next" value="https://agenticforge.live/en/thanks/" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_autoresponse" value="We received your AgentForge request for setup, troubleshooting, or a first agent. We will get back to you soon." data-i18n-value="formAutoresponse" />
+          <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" />
+
+          <label for="consultingType" data-i18n="formTypeLabel">Session focus</label>
+          <select id="consultingType" name="consultingType" required>
+            <option value="" data-i18n="formTypePlaceholder">Choose where you want to start</option>
+            <option value="setup" data-i18n="formTypeSetup">Setup and installation</option>
+            <option value="strategy" data-i18n="formTypeStrategy">First agent or workflow</option>
+            <option value="optimization" data-i18n="formTypeOptimization">Troubleshooting / optimization</option>
+          </select>
+
+          <label for="contactChannel" data-i18n="formChannelLabel">Preferred channel</label>
+          <select id="contactChannel" name="contactChannel" required>
+            <option value="" data-i18n="formChannelPlaceholder">Choose how you want to be contacted</option>
+            <option value="teams" data-i18n="formChannelTeams">Teams</option>
+            <option value="telegram" data-i18n="formChannelTelegram">Telegram</option>
+            <option value="email" data-i18n="formChannelEmail">Email</option>
+          </select>
+
+          <label for="name" data-i18n="formNameLabel">Full name</label>
+          <input id="name" name="name" type="text" required data-i18n-placeholder="formNamePh" placeholder="John Smith" />
+
+          <label for="email" data-i18n="formEmailLabel">Business email</label>
+          <input id="email" name="email" type="email" required data-i18n-placeholder="formEmailPh" placeholder="name@company.com" />
+
+          <label for="role" data-i18n="formRoleLabel">Role / Industry</label>
+          <input id="role" name="role" type="text" required data-i18n-placeholder="formRolePh" placeholder="SaaS Founder" />
+
+          <label for="goal" data-i18n="formGoalLabel">Main objective</label>
+          <textarea id="goal" name="goal" rows="4" required data-i18n-placeholder="formGoalPh" placeholder="I want to create an agent that automates customer onboarding"></textarea>
+
+          <label for="telegramHandle" data-i18n="formTelegramLabel">Telegram handle (optional)</label>
+          <input id="telegramHandle" name="telegramHandle" type="text" data-i18n-placeholder="formTelegramPh" placeholder="@yourhandle" />
+
+          <button type="submit" class="btn btn-primary full" data-i18n="formSubmit">Send setup request</button>
+          <p class="form-note" id="formMessage" aria-live="polite"></p>
+          <p class="form-help" data-i18n="formHelp">The form sends the request directly to agenticforge@libero.it through a static-form backend.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p data-i18n="footerCopy">OpenClaw setup, practical guides, troubleshooting, and ready-to-use agents.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

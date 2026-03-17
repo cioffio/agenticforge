@@ -974,6 +974,7 @@ const langButtons = document.querySelectorAll(".lang-btn");
 const form = document.querySelector("#leadForm");
 const formMessage = document.querySelector("#formMessage");
 const metaDescription = document.querySelector('meta[name="description"]');
+const fixedLang = document.documentElement.dataset.fixedLang;
 
 function applyLanguage(lang) {
   const pack = translations[lang] || translations.it;
@@ -1021,15 +1022,30 @@ function applyLanguage(lang) {
     formMessage.textContent = "";
   }
 
-  localStorage.setItem("preferredLang", lang);
+  if (!fixedLang) {
+    localStorage.setItem("preferredLang", lang);
+  }
 }
 
 langButtons.forEach((btn) => {
-  btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
+  btn.addEventListener("click", () => {
+    if (btn.dataset.langPath) {
+      window.location.href = btn.dataset.langPath;
+      return;
+    }
+
+    applyLanguage(btn.dataset.lang);
+  });
 });
 
 const savedLang = localStorage.getItem("preferredLang");
-applyLanguage(savedLang && translations[savedLang] ? savedLang : "it");
+const initialLang =
+  (fixedLang && translations[fixedLang] && fixedLang) ||
+  (savedLang && translations[savedLang] && savedLang) ||
+  (translations[document.documentElement.lang] ? document.documentElement.lang : null) ||
+  "it";
+
+applyLanguage(initialLang);
 
 if (form) {
   form.addEventListener("submit", () => {

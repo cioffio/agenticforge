@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>How to Install Agents in OpenClaw | Practical Guide</title>
+  <meta name="description" content="Practical guide to install agents in OpenClaw: onboarding, agents, plugins, and the steps that turn setup into a real workflow." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/en/installare-agenti/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/installare-agenti/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/installare-agenti/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/installare-agenti/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/installare-agenti/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Install Agents in OpenClaw | Practical Guide" />
+  <meta property="og:description" content="How to move from OpenClaw installed to the first useful agent with agents, plugins, and minimum configuration." />
+  <meta property="og:url" content="https://agenticforge.live/en/installare-agenti/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Install Agents in OpenClaw | Practical Guide" />
+  <meta name="twitter:description" content="How to move from OpenClaw installed to the first useful agent with agents, plugins, and minimum configuration." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/en/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/en/install-openclaw/">Install guide</a>
+        <a class="btn btn-primary" href="/en/#book">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Agents</p>
+        <h1 class="doc-title">How to install agents in OpenClaw without stopping at setup</h1>
+        <p class="doc-intro">Installing OpenClaw is not enough. To reach an agent that does real work you need to complete onboarding, define the agent, choose the right plugins, and validate the first concrete task.</p>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>Step 1: onboarding and a stable base</h2>
+            <p>You need a stable base first. If you skip this, the agents you create later will sit on top of a fragile setup.</p>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw dashboard</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Step 2: add or define the first agent</h2>
+            <p>The point is not creating ten abstract agents. The point is defining one with a precise role, a clear task, and understandable limits.</p>
+            <div class="code-block"><pre><code>openclaw agents add <name>
+openclaw configure</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Step 3: use plugins and tools only when they help</h2>
+            <p>Plugins add concrete capabilities. The typical mistake is installing too many too early. It is far better to start with one useful workflow and add only what actually matters.</p>
+            <div class="code-block"><pre><code>openclaw plugins list
+openclaw plugins install @openclaw/voice-call</code></pre></div>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Before and after</h3>
+            <ul>
+              <li><a href="/en/install-openclaw/">Install OpenClaw first</a></li>
+              <li><a href="/en/agenti-pronti/">Then define one clear agent</a></li>
+              <li><a href="/en/#book">Only then add plugins and extra tools</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/en/">Home</a> · <a href="/en/agenti-pronti/">Ready agents</a></p>
+    </div>
+  </footer>
+</body>
+</html>

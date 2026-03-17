@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <title>How to Install OpenClaw | Practical Guide</title>
+  <meta name="description" content="Practical guide to install OpenClaw on Windows, macOS, and Linux with the official commands, onboarding, and first checks." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://agenticforge.live/en/install-openclaw/" />
+  <link rel="alternate" hreflang="it" href="https://agenticforge.live/install-openclaw/" />
+  <link rel="alternate" hreflang="en" href="https://agenticforge.live/en/install-openclaw/" />
+  <link rel="alternate" hreflang="ar" href="https://agenticforge.live/ar/install-openclaw/" />
+  <link rel="alternate" hreflang="x-default" href="https://agenticforge.live/install-openclaw/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Install OpenClaw | Practical Guide" />
+  <meta property="og:description" content="OpenClaw installation, initial onboarding, and quick links for Windows, macOS, and Linux." />
+  <meta property="og:url" content="https://agenticforge.live/en/install-openclaw/" />
+  <meta property="og:image" content="https://agenticforge.live/robot-comic.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Install OpenClaw | Practical Guide" />
+  <meta name="twitter:description" content="OpenClaw installation, initial onboarding, and quick links for Windows, macOS, and Linux." />
+  <meta name="twitter:image" content="https://agenticforge.live/robot-comic.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="/en/" class="brand" aria-label="AgentForge">
+        <span class="brand-mark">{AF}</span>
+        <span class="brand-copy">
+          <span class="brand-text">AgentForge</span>
+          <span class="brand-sub">OpenClaw setup, guides, and ready agents</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="/en/">Back to home</a>
+        <a class="btn btn-primary" href="/en/#book">Book setup</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Practical guide</p>
+        <h1 class="doc-title">How to install OpenClaw and reach your first working agent</h1>
+        <p class="doc-intro">This is the main guide. It gives you the simplest path to install OpenClaw, complete the first onboarding flow, and reach a ready environment on Windows, macOS, or Linux without getting lost in scattered commands and half-finished configuration.</p>
+        <div class="doc-actions">
+          <a class="btn btn-primary" href="/en/openclaw-windows/">Windows guide</a>
+          <a class="btn btn-ghost" href="/en/openclaw-macos/">macOS guide</a>
+          <a class="btn btn-ghost" href="/en/openclaw-linux/">Linux guide</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <article>
+          <div class="doc-block">
+            <h2>The simplest flow in 3 steps</h2>
+            <ol>
+              <li>Install OpenClaw with the right official script for your operating system.</li>
+              <li>Run guided onboarding to configure gateway and base settings.</li>
+              <li>Open the dashboard and verify that the first agent actually answers.</li>
+            </ol>
+          </div>
+
+          <div class="doc-block">
+            <h2>Official commands worth starting from</h2>
+            <p>macOS, Linux, and WSL2</p>
+            <div class="code-block"><pre><code>curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash</code></pre></div>
+            <div class="code-block"><pre><code>iwr -useb https://openclaw.ai/install.ps1 | iex</code></pre></div>
+            <div class="code-block"><pre><code>openclaw onboard --install-daemon
+openclaw dashboard</code></pre></div>
+          </div>
+
+          <div class="doc-block">
+            <h2>Which guide to open next</h2>
+            <p>If your goal is not only to install OpenClaw but also to launch a useful workflow, the next step is configuring agents, plugins, and tools with intent.</p>
+            <ul>
+              <li>If you use Windows, the documentation-backed path is WSL2.</li>
+              <li>If you work on Mac, the official script is the fastest route.</li>
+              <li>If you are on Linux, the same script remains the cleanest starting point.</li>
+            </ul>
+          </div>
+        </article>
+
+        <aside>
+          <div class="risk-panel sticky-card">
+            <h3>Jump straight to</h3>
+            <ul>
+              <li><a href="/en/openclaw-windows/">OpenClaw on Windows</a></li>
+              <li><a href="/en/openclaw-macos/">OpenClaw on macOS</a></li>
+              <li><a href="/en/openclaw-linux/">OpenClaw on Linux</a></li>
+              <li><a href="/en/installare-agenti/">How to install agents</a></li>
+              <li><a href="/en/agenti-pronti/">Ready agents</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>AgentForge</p>
+      <p><a href="/en/">Home</a> · <a href="/en/#book">Book setup</a></p>
+    </div>
+  </footer>
+</body>
+</html>
