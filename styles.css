@@ -117,6 +117,19 @@ a {
   font-weight: 700;
 }
 
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.brand-sub {
+  font-size: 0.68rem;
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.6px;
+  color: #9fc1df;
+}
+
 .brand-mark {
   display: grid;
   place-items: center;
@@ -581,6 +594,10 @@ a {
   margin-bottom: 0.6rem;
 }
 
+.feature-card .code-block {
+  margin: 0.8rem 0;
+}
+
 .contact-email {
   margin-top: 0.8rem;
   font-family: "IBM Plex Mono", monospace;
@@ -873,6 +890,10 @@ a {
     font-size: 1.85rem;
   }
 
+  .brand-sub {
+    display: none;
+  }
+
   .stats-grid,
   .quickstart-grid,
   .feature-grid,
@@ -903,6 +924,10 @@ html[dir="rtl"] .header-actions,
 html[dir="rtl"] .hero-actions,
 html[dir="rtl"] .footer-wrap {
   flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .brand-copy {
+  align-items: flex-end;
 }
 
 html[dir="rtl"] .panel-list,

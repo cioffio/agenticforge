@@ -5,11 +5,12 @@ const translations = {
     navOffer: "What you get",
     navProcess: "Process",
     navPricing: "Packages",
-    navAdvisory: "Strategy Lab",
+    navAdvisory: "After setup",
     navContact: "Contact",
     navFaq: "FAQ",
     navCta: "Book setup",
-    heroEyebrow: "Guided OpenClaw setup",
+    brandSub: "OpenClaw setup, guides, and ready agents",
+    heroEyebrow: "AgentForge Setup for OpenClaw",
     heroTitle:
       "Use OpenClaw without losing hours to setup and configuration.",
     heroSub:
@@ -56,6 +57,20 @@ const translations = {
     workflowStep3Body: "Tools, skills, and permissions set with intent",
     workflowStep4: "Launch",
     workflowStep4Body: "First agent tested on a useful task",
+    commandEyebrow: "Real commands",
+    commandTitle:
+      "If you want to start now, these are the official commands worth showing first.",
+    commandBody:
+      "People landing here want installation, onboarding, and a first operational check, not abstract promises.",
+    cmd1Title: "macOS, Linux, and WSL2",
+    cmd1Body:
+      "The official script is the cleanest starting point for macOS, Linux, and Windows through WSL2.",
+    cmd2Title: "Windows PowerShell",
+    cmd2Body:
+      "You can also use PowerShell on Windows, but WSL2 is often the more stable path for a serious setup.",
+    cmd3Title: "After installation",
+    cmd3Body:
+      "This is where the real difference starts: correct onboarding and a final check before tools and agents.",
     guidesEyebrow: "Practical guides",
     guidesTitle:
       "The first pages worth reading if you want to start using OpenClaw in a practical way.",
@@ -79,22 +94,22 @@ const translations = {
     guide6Title: "Ready agents",
     guide6Body:
       "Concrete examples for support, research, reporting, and real operational workflows.",
-    stat1: "Consulting duration based on package",
-    stat2: "Customized Teams session",
-    stat3: "Maximum 48h technical follow-up window",
-    stat4: "Starter scripts and prompt pack included",
-    aboutEyebrow: "Who we are",
+    stat1: "Session length based on package",
+    stat2: "Operational Teams session",
+    stat3: "Technical follow-up within 48h max",
+    stat4: "Checklist, commands, and prompt pack included",
+    aboutEyebrow: "Why AgentForge Setup",
     aboutTitle:
-      "Independent consulting built on international execution, not generic AI hype.",
+      "This is not agent hype. It is a practical path from installation to real usage.",
     aboutBody1:
-      "I am an independent consultant with international experience across digital products, operations and AI-driven delivery. Over the years I have helped launch multiple successful projects for different markets, combining technical execution with business pragmatism.",
+      "The site is intentionally operational: installation, providers, tools, permissions, ready agents, and troubleshooting. The goal is not explaining the future of agents, but helping you use OpenClaw without unnecessary friction.",
     aboutBody2:
-      "After a long period working under other people's rules, priorities and limitations, I decided to build my own business: a focused consulting practice designed to help clients adopt OpenClaw and practical agent workflows faster, more safely and with real operational outcomes.",
-    aboutPanelTitle: "What this means for clients",
-    aboutPoint1: "Direct senior guidance instead of generic support",
-    aboutPoint2: "International product and execution perspective",
-    aboutPoint3: "Clear opinions on what to build, improve or avoid",
-    aboutPoint4: "A practical path from idea to working agent",
+      "When needed, the hands-on session helps you move faster through the parts that break most often: unstable setup, wrong model choice, useless plugins, or agents that never produce a concrete task.",
+    aboutPanelTitle: "What you get here",
+    aboutPoint1: "Practical guides instead of generic marketing",
+    aboutPoint2: "Real commands, not only concepts",
+    aboutPoint3: "Setup, agents, and troubleshooting in one flow",
+    aboutPoint4: "A clear path from zero to ready-to-use",
     whyEyebrow: "Why act now",
     whyTitle:
       "The real problem is not discovering OpenClaw exists, but getting it to work properly on the first try.",
@@ -106,7 +121,7 @@ const translations = {
     risk3: "Tools and skills added without a clear plan or with excessive access",
     risk4:
       "Agents that launch badly or never become useful for real tasks",
-    offerEyebrow: "What is included",
+    offerEyebrow: "What you leave with",
     offerTitle:
       "We reduce friction at the 6 points that block almost everyone at the start.",
     feat1Title: "Installation without dead ends",
@@ -127,22 +142,28 @@ const translations = {
     feat6Title: "Troubleshooting and next steps",
     feat6Body:
       "If something breaks, we fix the critical point and you end the session with a checklist and a clear direction forward.",
-    agentsEyebrow: "What becomes possible after setup",
+    agentsEyebrow: "Ready-to-use agents",
     agentsTitle:
-      "When OpenClaw is configured properly, agents stop being a demo and start doing useful work.",
-    agent1Title: "Customer Support",
+      "The most useful examples are not abstract AI agents, but workflows you can actually start using.",
+    agent1Title: "Email agent",
     agent1Body:
-      "Reply to common questions, triage requests, collect context and escalate only the cases that need a human.",
-    agent2Title: "Lead Qualification",
+      "Reads context, drafts replies, filters repetitive requests, and leaves only important cases to a human.",
+    agent2Title: "Calendar and follow-up agent",
     agent2Body:
-      "Handle first contact, ask qualifying questions, prepare summaries and pass clean opportunities to sales.",
-    agent3Title: "Research And Knowledge",
+      "Keeps reminders, follow-ups, and next steps organized so operational continuity does not break.",
+    agent3Title: "Web research agent",
     agent3Body:
-      "Search internal documents, summarize sources, compare options and build quick operational notes for the team.",
-    agent4Title: "Reporting And Ops",
+      "Finds sources, summarizes results, and prepares usable notes instead of leaving you with chaotic tabs.",
+    agent4Title: "Local agent with Ollama",
     agent4Body:
-      "Monitor repetitive workflows, prepare updates, organize data and support recurring execution tasks.",
-    processEyebrow: "Consulting process",
+      "If you want a more local or controlled setup, you can start from local models and evolve the workflow from there.",
+    agent5Title: "Self-hosted agent",
+    agent5Body:
+      "For more structured cases, you can bring OpenClaw into controlled environments and aim for a steadier deployment.",
+    agent6Title: "Reporting ops agent",
+    agent6Body:
+      "Collects recurring data, prepares updates, and helps keep operational workflows in order.",
+    processEyebrow: "Operational path",
     processTitle: "We take you from zero to a first working agent in 4 steps.",
     step1Title: "Starting-point check",
     step1Body:
@@ -156,33 +177,56 @@ const translations = {
     step4Title: "Final test and troubleshooting",
     step4Body:
       "We validate the first agent, fix the remaining blockers, and close with a checklist and practical next steps.",
-    pricingEyebrow: "Consulting packages",
-    pricingTitle: "Choose whether you need fast setup or a strategic agent review.",
-    plan1Price: "EUR25",
-    plan1Name: "Kickstart",
+    pricingEyebrow: "Sessions and packages",
+    pricingTitle: "Choose whether you need installation, ready-to-use setup, or troubleshooting.",
+    plan1Price: "€25",
+    plan1Name: "Quick Setup",
     plan1Time: "30 minutes",
-    plan1Feat1: "OpenClaw or basic agent setup",
-    plan1Feat2: "Minimum security pre-check",
-    plan1Feat3: "1 mini agent template",
+    plan1Feat1: "Guided OpenClaw installation",
+    plan1Feat2: "Provider or model check",
+    plan1Feat3: "Ready initial checklist",
     planBtn: "Book now",
-    planFeatured: "Most chosen",
+    planFeatured: "Most useful",
     plan2Price: "To agree",
-    plan2Name: "Strategy Session",
-    plan2Time: "Scope to be agreed",
-    plan2Feat1: "Use-case review + agent roadmap",
-    plan2Feat2: "Channel and workflow strategy",
-    plan2Feat3: "Priority decisions on what to build next",
+    plan2Name: "Ready To Use",
+    plan2Time: "60 minutes",
+    plan2Feat1: "Complete setup to first workflow",
+    plan2Feat2: "Tools and skills ready",
+    plan2Feat3: "1 validated operational agent",
     plan3Price: "To agree",
-    plan3Name: "Advisory Sprint",
-    plan3Time: "Custom engagement",
-    plan3Feat1: "Deep review of an existing agent or process",
-    plan3Feat2: "Refinement of prompts, flows, and responsibilities",
-    plan3Feat3: "Concrete plan for improvement and rollout",
-    advisoryEyebrow: "Strategic consulting",
+    plan3Name: "Troubleshooting Lab",
+    plan3Time: "90 minutes",
+    plan3Feat1: "Diagnosis of a broken or unstable setup",
+    plan3Feat2: "Fixes for tools, models, plugins, or permissions",
+    plan3Feat3: "Clean plan to restart from a stable base",
+    advisoryEyebrow: "Beyond installation",
     advisoryTitle:
-      "Not only setup: the strategy consulting is for AI agents, use cases, and improvement decisions too.",
+      "Once OpenClaw really runs, the session can become a review of workflows, agents, and deployment choices.",
     advisoryBody:
-      "If you already have OpenClaw running, or if you are simply exploring agents for your business, the call becomes a practical review of flows, prompts, channels, automations, roles, and risks. The goal is deciding what to build and in which order.",
+      "After setup, the goal is not adding complexity at random. The goal is deciding which use cases make sense, which channels to use, which agents should really live, and which ideas should be dropped.",
+    troubleEyebrow: "Troubleshooting",
+    troubleTitle:
+      "When something breaks, the value is knowing where to put your hands first.",
+    troubleBody:
+      "These are the most common blockers worth surfacing directly on the homepage.",
+    tr1Title: "The command does not run",
+    tr1Body:
+      "When OpenClaw is not recognized or the install stops, the issue is usually path or prerequisites.",
+    tr2Title: "Windows or WSL2?",
+    tr2Body:
+      "Many start in PowerShell and only later realize WSL2 makes the whole setup cleaner and more predictable.",
+    tr3Title: "The model answers badly",
+    tr3Body:
+      "Often the problem is not OpenClaw itself, but a poor choice of provider, model, or local versus cloud configuration.",
+    tr4Title: "Tools and permissions are messy",
+    tr4Body:
+      "If you connect too many tools or give overly broad access, the setup becomes fragile before it becomes useful.",
+    tr5Title: "The agent does not do a real task",
+    tr5Body:
+      "This usually happens when the prompt is vague or the agent role is not tied to a concrete workflow.",
+    tr6Title: "Dashboard or gateway looks wrong",
+    tr6Body:
+      "If onboarding was done badly or the daemon is unstable, fix that before adding anything else.",
     adv1Title: "Idea Review",
     adv1Body:
       "We analyze your agent idea and determine whether it has real operational value, where it breaks, and which data it actually needs.",
@@ -216,7 +260,7 @@ const translations = {
     fb6Meta: "Mariam K. - Operations Lead, Riyadh",
     contactEyebrow: "Contact channels",
     contactTitle:
-      "You can contact us for a quick question or book a more structured consulting session.",
+      "Write for setup, troubleshooting, or your first ready-to-use agent.",
     contact1Title: "Teams",
     contact1Body:
       "Best for operational sessions, live installation, and technical reviews with screen sharing.",
@@ -228,30 +272,35 @@ const translations = {
       "Ideal for sending initial briefs, documents, use cases, and more detailed quote requests.",
     contactEmail: "agenticforge@libero.it",
     faqEyebrow: "Quick FAQ",
-    faqTitle: "Frequently asked questions before booking.",
-    faq1Q: "Do I need technical experience already?",
+    faqTitle: "The practical questions people ask before starting.",
+    faq1Q: "Do I already need technical experience?",
     faq1A:
-      "No. The consulting is designed for non-technical users too. We guide each step in clear language.",
-    faq2Q: "Is the session really customized?",
+      "No. The flow is also designed for people who do not want to get stuck in terminals, dependencies, and scattered configuration.",
+    faq2Q: "Can I use local models like Ollama?",
     faq2A:
-      "Yes. Every call starts from your real objective and ends with an agent configured around your context.",
-    faq3Q: "Can I join with a colleague?",
+      "Yes, when the use case calls for it. The real point is deciding whether local or cloud makes more sense for your goal and environment.",
+    faq3Q: "Can you help if the setup breaks?",
     faq3A:
-      "Yes, two participants are included at no extra cost in the Builder and Ops Pro packages.",
-    faq4Q: "Which platform do we use?",
+      "Yes. A big part of the work is identifying where the flow broke and bringing it back to a stable base.",
+    faq4Q: "Can I start from Windows, macOS, or Linux?",
     faq4A:
-      "Microsoft Teams with screen sharing. You receive the link and a preparation checklist before the call.",
-    bookEyebrow: "Book your consulting session",
+      "Yes. The site already includes guides for all three, with WSL2 as a useful option on Windows.",
+    bookEyebrow: "Book your setup",
     bookTitle:
-      "Bring OpenClaw or your next agent workflow into the business with a focused Teams session.",
+      "Bring OpenClaw from installed to useful with a focused Teams session.",
     bookSub:
       "Fill in your details and receive a proposed time within 24 business hours.",
-    bookTeams: "Direct email",
-    formTypeLabel: "Consulting type",
-    formTypePlaceholder: "Select the session focus",
+    bookTeams: "Write by email",
+    bookTeamsHref:
+      "mailto:agenticforge@libero.it?subject=AgentForge%20Setup%20Request",
+    formSubject: "New AgentForge setup request",
+    formAutoresponse:
+      "We received your AgentForge request for setup, troubleshooting, or a first agent. We will get back to you soon.",
+    formTypeLabel: "Session focus",
+    formTypePlaceholder: "Choose where you want to start",
     formTypeSetup: "Setup and installation",
-    formTypeStrategy: "Idea review and agent development",
-    formTypeOptimization: "Existing agent optimization",
+    formTypeStrategy: "First agent or workflow",
+    formTypeOptimization: "Troubleshooting / optimization",
     formChannelLabel: "Preferred channel",
     formChannelPlaceholder: "Choose how you want to be contacted",
     formChannelTeams: "Teams",
@@ -268,14 +317,14 @@ const translations = {
       "I want to create an agent that automates customer onboarding",
     formTelegramLabel: "Telegram handle (optional)",
     formTelegramPh: "@yourhandle",
-    formSubmit: "Send consulting request",
+    formSubmit: "Send setup request",
     formHelp:
       "The form sends the request directly to agenticforge@libero.it through a static-form backend.",
     footerCopy:
-      "Guided OpenClaw setup, troubleshooting, and AI agents for real workflows.",
-    title: "AgentForge | OpenClaw Setup And First AI Agent",
+      "OpenClaw setup, practical guides, troubleshooting, and ready-to-use agents.",
+    title: "AgentForge Setup | Install OpenClaw, Guides, And Ready Agents",
     description:
-      "Guided OpenClaw installation, model and tool connection, troubleshooting, and a first working AI agent on Windows, macOS, or Linux.",
+      "Install OpenClaw in a practical way with guides for Windows, macOS, and Linux, plus troubleshooting and ready agents.",
     formSuccess: "Your request is being sent.",
     formMissing: "Please fill in all required fields correctly.",
   },
@@ -284,11 +333,12 @@ const translations = {
     navOffer: "Cosa ottieni",
     navProcess: "Processo",
     navPricing: "Pacchetti",
-    navAdvisory: "Strategy Lab",
+    navAdvisory: "Dopo il setup",
     navContact: "Contatti",
     navFaq: "FAQ",
     navCta: "Prenota il setup",
-    heroEyebrow: "Setup OpenClaw guidato",
+    brandSub: "OpenClaw setup, guide e agenti pronti",
+    heroEyebrow: "AgentForge Setup per OpenClaw",
     heroTitle: "Usa OpenClaw senza perdere ore in setup e configurazione.",
     heroSub:
       "Installazione pratica, modelli, tool e primo agente funzionante su Windows, macOS e Linux, in una sessione guidata su Teams.",
@@ -333,6 +383,20 @@ const translations = {
     workflowStep3Body: "Tool, skill e permessi con criterio",
     workflowStep4: "Lancia",
     workflowStep4Body: "Primo agente testato su un task utile",
+    commandEyebrow: "Comandi reali",
+    commandTitle:
+      "Se vuoi partire subito, questi sono i comandi ufficiali da cui si parte davvero.",
+    commandBody:
+      "Chi arriva qui vuole vedere installazione, onboarding e primo controllo operativo, non solo descrizioni generiche.",
+    cmd1Title: "macOS, Linux e WSL2",
+    cmd1Body:
+      "Lo script ufficiale e il punto di partenza piu pulito per macOS, Linux e Windows via WSL2.",
+    cmd2Title: "Windows PowerShell",
+    cmd2Body:
+      "Su Windows puoi usare anche PowerShell, ma per un setup piu stabile conviene valutare WSL2.",
+    cmd3Title: "Dopo l'installazione",
+    cmd3Body:
+      "Qui fai la differenza: onboarding corretto e controllo finale prima di passare a tool e agenti.",
     guidesEyebrow: "Guide operative",
     guidesTitle:
       "Le prime pagine utili da leggere se vuoi partire con OpenClaw in modo pratico.",
@@ -356,22 +420,22 @@ const translations = {
     guide6Title: "Agenti pronti",
     guide6Body:
       "Esempi concreti di agenti per supporto, ricerca, reporting e workflow operativi reali.",
-    stat1: "Durata consulenza in base al pacchetto",
-    stat2: "Sessione personalizzata su Teams",
-    stat3: "Finestra massima per follow-up tecnico",
-    stat4: "Script base e prompt pack inclusi",
-    aboutEyebrow: "Chi siamo",
+    stat1: "Durata sessione in base al pacchetto",
+    stat2: "Sessione operativa su Teams",
+    stat3: "Follow-up tecnico massimo entro 48h",
+    stat4: "Checklist, comandi e prompt pack inclusi",
+    aboutEyebrow: "Perche AgentForge Setup",
     aboutTitle:
-      "Una consulenza indipendente costruita su esperienza internazionale e risultati concreti, non su hype generico sull'AI.",
+      "Qui non trovi hype sugli agenti: trovi un percorso pratico da installazione a uso reale.",
     aboutBody1:
-      "Sono un consulente indipendente con esperienza internazionale tra prodotti digitali, operations e delivery guidata dall'AI. Negli anni ho contribuito al lancio di piu progetti di successo in mercati diversi, unendo esecuzione tecnica e pragmatismo di business.",
+      "Il taglio del sito e intenzionalmente operativo: installazione, provider, tool, permessi, agenti pronti e troubleshooting. L'obiettivo non e spiegare il futuro degli agenti, ma aiutarti a usare OpenClaw senza attrito inutile.",
     aboutBody2:
-      "Dopo un lungo periodo passato a lavorare dentro regole, priorita e limiti imposti da altri, ho deciso di creare la mia attivita: una consulenza focalizzata per aiutare i clienti ad adottare OpenClaw e workflow agentici in modo piu rapido, sicuro e davvero utile sul piano operativo.",
-    aboutPanelTitle: "Cosa significa per i clienti",
-    aboutPoint1: "Guida senior diretta, non supporto generico",
-    aboutPoint2: "Visione internazionale su prodotto ed esecuzione",
-    aboutPoint3: "Opinioni chiare su cosa costruire, migliorare o evitare",
-    aboutPoint4: "Un percorso pratico dall'idea all'agente funzionante",
+      "Quando serve, la sessione operativa entra per accelerare i passaggi che bloccano di piu: setup rotto, modello sbagliato, plugin inutili, agenti che non producono un task concreto.",
+    aboutPanelTitle: "Cosa trovi qui",
+    aboutPoint1: "Guide pratiche invece di marketing generico",
+    aboutPoint2: "Comandi veri, non solo concetti",
+    aboutPoint3: "Setup, agenti e troubleshooting nello stesso flusso",
+    aboutPoint4: "Un percorso chiaro da zero a pronto all'uso",
     whyEyebrow: "Perché agire adesso",
     whyTitle:
       "Il vero problema non e sapere che OpenClaw esiste, ma farlo funzionare bene al primo colpo.",
@@ -382,7 +446,7 @@ const translations = {
     risk2: "Dubbi su provider, API key e modello locale o cloud",
     risk3: "Tool e skill aggiunti senza criterio o con accessi eccessivi",
     risk4: "Agenti che partono male o non fanno task davvero utili",
-    offerEyebrow: "Cosa ottieni nella consulenza",
+    offerEyebrow: "Cosa porti a casa",
     offerTitle: "Riduciamo l'attrito nei 6 punti che bloccano quasi tutti all'inizio.",
     feat1Title: "Installazione senza impasse",
     feat1Body:
@@ -402,22 +466,28 @@ const translations = {
     feat6Title: "Troubleshooting e prossimi passi",
     feat6Body:
       "Se qualcosa si rompe, sistemiamo il punto critico e chiudi la sessione con checklist e direzione chiara per andare avanti.",
-    agentsEyebrow: "Cosa diventa possibile dopo il setup",
+    agentsEyebrow: "Agenti pronti all'uso",
     agentsTitle:
-      "Quando OpenClaw e configurato bene, gli agenti smettono di essere una demo e iniziano a fare lavoro utile.",
-    agent1Title: "Customer Support",
+      "Gli esempi piu utili non sono \"AI agents\" in astratto, ma workflow pronti da far partire davvero.",
+    agent1Title: "Agente email",
     agent1Body:
-      "Rispondono alle domande frequenti, fanno triage delle richieste, raccolgono contesto e passano a un umano solo i casi che lo richiedono.",
-    agent2Title: "Lead Qualification",
+      "Legge contesto, prepara risposte, filtra richieste ripetitive e lascia all'umano solo i casi importanti.",
+    agent2Title: "Agente calendario e follow-up",
     agent2Body:
-      "Gestiscono il primo contatto, fanno domande di qualificazione, preparano riassunti e passano opportunita pulite al sales.",
-    agent3Title: "Research E Knowledge",
+      "Organizza promemoria, follow-up e passaggi successivi senza perdere continuita nelle attivita operative.",
+    agent3Title: "Agente ricerca web",
     agent3Body:
-      "Cercano nei documenti interni, riassumono fonti, confrontano opzioni e preparano note operative rapide per il team.",
-    agent4Title: "Reporting E Ops",
+      "Cerca fonti, sintetizza risultati e prepara note utili invece di lasciarti con una lista caotica di link.",
+    agent4Title: "Agente locale con Ollama",
     agent4Body:
-      "Monitorano flussi ripetitivi, preparano aggiornamenti, organizzano dati e supportano task di esecuzione ricorrenti.",
-    processEyebrow: "Processo consulenza",
+      "Se vuoi un setup piu locale o piu controllato, puoi partire da modelli locali e poi evolvere il workflow.",
+    agent5Title: "Agente self-hosted",
+    agent5Body:
+      "Per casi piu strutturati puoi portare OpenClaw in ambienti piu controllati e costruire un deploy piu stabile.",
+    agent6Title: "Agente reporting ops",
+    agent6Body:
+      "Raccoglie dati ricorrenti, prepara aggiornamenti e aiuta a tenere ordine nei workflow operativi.",
+    processEyebrow: "Percorso operativo",
     processTitle: "Ti portiamo da zero al primo agente funzionante in 4 fasi.",
     step1Title: "Verifica punto di partenza",
     step1Body:
@@ -431,33 +501,56 @@ const translations = {
     step4Title: "Test finale e troubleshooting",
     step4Body:
       "Validiamo il primo agente, correggiamo i blocchi rimasti e chiudi con checklist e prossimi passi concreti.",
-    pricingEyebrow: "Pacchetti consulenza",
-    pricingTitle: "Scegli se ti serve un setup rapido o una review strategica sugli agenti.",
-    plan1Price: "EUR25",
-    plan1Name: "Kickstart",
+    pricingEyebrow: "Sessioni e pacchetti",
+    pricingTitle: "Scegli se ti serve installazione, messa in funzione o troubleshooting.",
+    plan1Price: "€25",
+    plan1Name: "Quick Setup",
     plan1Time: "30 minuti",
-    plan1Feat1: "Setup base OpenClaw o agente",
-    plan1Feat2: "Pre-check sicurezza minimo",
-    plan1Feat3: "1 mini-template agente",
+    plan1Feat1: "Installazione OpenClaw guidata",
+    plan1Feat2: "Verifica modello o provider",
+    plan1Feat3: "Checklist iniziale pronta",
     planBtn: "Prenota ora",
-    planFeatured: "Più scelto",
+    planFeatured: "Più utile",
     plan2Price: "Da concordare",
-    plan2Name: "Strategy Session",
-    plan2Time: "Scope da concordare",
-    plan2Feat1: "Review use-case + roadmap agenti",
-    plan2Feat2: "Strategia canali e workflow",
-    plan2Feat3: "Priorita chiare su cosa costruire dopo",
+    plan2Name: "Ready To Use",
+    plan2Time: "60 minuti",
+    plan2Feat1: "Setup completo fino al primo workflow",
+    plan2Feat2: "Tool e skill pronti",
+    plan2Feat3: "1 agente operativo valido",
     plan3Price: "Da concordare",
-    plan3Name: "Advisory Sprint",
-    plan3Time: "Ingaggio personalizzato",
-    plan3Feat1: "Analisi approfondita di un agente o processo esistente",
-    plan3Feat2: "Rifinitura di prompt, flussi e responsabilita",
-    plan3Feat3: "Piano concreto di miglioramento e rollout",
-    advisoryEyebrow: "Consulenza strategica",
+    plan3Name: "Troubleshooting Lab",
+    plan3Time: "90 minuti",
+    plan3Feat1: "Diagnosi setup rotto o instabile",
+    plan3Feat2: "Fix su tool, modelli, plugin o permessi",
+    plan3Feat3: "Piano pulito per ripartire",
+    advisoryEyebrow: "Oltre l'installazione",
     advisoryTitle:
-      "Non solo setup: la consulenza strategica e pensata anche per agenti, use case e decisioni di miglioramento.",
+      "Quando OpenClaw parte davvero, la sessione puo diventare review di workflow, agenti e deployment.",
     advisoryBody:
-      "Se hai gia OpenClaw attivo, oppure stai solo valutando come usare gli agenti nel tuo business, la call diventa una review concreta di flussi, prompt, canali, automazioni, ruoli e rischi. L'obiettivo e decidere cosa costruire e in che ordine.",
+      "Dopo il setup, il punto non e aggiungere complessita a caso. Il punto e capire quali use case hanno senso, quali canali usare, quali agenti far vivere davvero e quali idee lasciare perdere.",
+    troubleEyebrow: "Troubleshooting",
+    troubleTitle:
+      "Se qualcosa si rompe, il valore sta nel sapere dove mettere le mani.",
+    troubleBody:
+      "Questi sono i blocchi piu comuni che vale la pena intercettare subito nella home.",
+    tr1Title: "Il comando non parte",
+    tr1Body:
+      "Quando OpenClaw non viene riconosciuto o l'installazione si interrompe, il problema e quasi sempre nel percorso o nei prerequisiti.",
+    tr2Title: "Windows o WSL2?",
+    tr2Body:
+      "Molti partono da PowerShell e poi scoprono che WSL2 rende il setup molto piu lineare e prevedibile.",
+    tr3Title: "Il modello non risponde bene",
+    tr3Body:
+      "Spesso il nodo non e OpenClaw, ma la scelta sbagliata di provider, modello o configurazione locale/cloud.",
+    tr4Title: "Tool e permessi confusi",
+    tr4Body:
+      "Se colleghi troppi tool o dai accessi troppo ampi, il setup diventa fragile prima ancora di diventare utile.",
+    tr5Title: "L'agente non fa un task reale",
+    tr5Body:
+      "Succede quando il prompt e troppo vago o il ruolo dell'agente non e legato a un workflow concreto.",
+    tr6Title: "Dashboard o gateway non tornano",
+    tr6Body:
+      "Se l'onboarding e stato fatto male o il daemon non e stabile, conviene sistemare quello prima di aggiungere altro.",
     adv1Title: "Idea Review",
     adv1Body:
       "Analizziamo la tua idea di agente e capiamo se ha valore operativo, dove si rompe e quali dati servono davvero.",
@@ -491,7 +584,7 @@ const translations = {
     fb6Meta: "Mariam K. - Operations Lead, Riyadh",
     contactEyebrow: "Canali di contatto",
     contactTitle:
-      "Puoi contattarci per una domanda veloce o prenotare una consulenza piu strutturata.",
+      "Scrivici per setup, troubleshooting o primo agente pronto all'uso.",
     contact1Title: "Teams",
     contact1Body:
       "Canale ideale per sessioni operative, installazione live e review tecniche condividendo lo schermo.",
@@ -503,29 +596,34 @@ const translations = {
       "Perfetta per inviare briefing iniziali, documenti, use case e richieste di preventivo piu dettagliate.",
     contactEmail: "agenticforge@libero.it",
     faqEyebrow: "FAQ rapide",
-    faqTitle: "Domande frequenti prima di prenotare.",
-    faq1Q: "Serve già esperienza tecnica?",
+    faqTitle: "Le domande pratiche che arrivano prima di partire.",
+    faq1Q: "Serve gia esperienza tecnica?",
     faq1A:
-      "No. La consulenza è progettata anche per utenti non tecnici: guidiamo ogni passaggio in linguaggio semplice.",
-    faq2Q: "La sessione è davvero personalizzata?",
+      "No. Il flusso e pensato anche per chi non vuole impazzire tra terminale, dipendenze e configurazioni sparse.",
+    faq2Q: "Posso usare modelli locali come Ollama?",
     faq2A:
-      "Sì. Ogni call parte dal tuo obiettivo reale e termina con un agente configurato sul tuo contesto.",
-    faq3Q: "Posso farla in team con un collega?",
+      "Si, quando il caso lo richiede. Il punto e scegliere se locale o cloud ha piu senso per il tuo obiettivo e per il tuo ambiente.",
+    faq3Q: "Mi aiuti anche se il setup si rompe?",
     faq3A:
-      "Sì, puoi partecipare in due senza costi aggiuntivi per i pacchetti Builder e Ops Pro.",
-    faq4Q: "Che piattaforma usiamo?",
+      "Si. Una parte importante del lavoro e proprio individuare dove si e rotto il flusso e riportarlo a una base stabile.",
+    faq4Q: "Posso partire da Windows, macOS o Linux?",
     faq4A:
-      "Microsoft Teams con condivisione schermo. Ricevi link e checklist preparatoria prima della call.",
-    bookEyebrow: "Prenota la consulenza",
+      "Si. Abbiamo gia preparato guide e flussi per tutti e tre gli ambienti, con WSL2 come opzione utile su Windows.",
+    bookEyebrow: "Prenota il setup",
     bookTitle:
-      "Porta OpenClaw o il tuo prossimo workflow agentico nel business con una sessione mirata su Teams.",
+      "Porta OpenClaw da installato a utile con una sessione operativa su Teams.",
     bookSub: "Compila i dati e ricevi proposta oraria entro 24 ore lavorative.",
-    bookTeams: "Email diretta",
-    formTypeLabel: "Tipo di consulenza",
-    formTypePlaceholder: "Seleziona il focus della sessione",
+    bookTeams: "Scrivi via email",
+    bookTeamsHref:
+      "mailto:agenticforge@libero.it?subject=Richiesta%20setup%20AgentForge",
+    formSubject: "Nuova richiesta setup AgentForge",
+    formAutoresponse:
+      "Abbiamo ricevuto la tua richiesta AgentForge per setup, troubleshooting o primo agente. Ti ricontatteremo al piu presto.",
+    formTypeLabel: "Focus della sessione",
+    formTypePlaceholder: "Seleziona da dove vuoi partire",
     formTypeSetup: "Setup e installazione",
-    formTypeStrategy: "Review idee e sviluppo agenti",
-    formTypeOptimization: "Ottimizzazione agente esistente",
+    formTypeStrategy: "Primo agente o workflow",
+    formTypeOptimization: "Troubleshooting / ottimizzazione",
     formChannelLabel: "Canale preferito",
     formChannelPlaceholder: "Scegli come vuoi essere ricontattato",
     formChannelTeams: "Teams",
@@ -541,14 +639,14 @@ const translations = {
     formGoalPh: "Voglio creare un agente che automatizzi onboarding clienti",
     formTelegramLabel: "Handle Telegram (opzionale)",
     formTelegramPh: "@tuohandle",
-    formSubmit: "Invia richiesta consulenza",
+    formSubmit: "Invia richiesta setup",
     formHelp:
       "Il form invia davvero la richiesta a agenticforge@libero.it tramite backend esterno per siti statici.",
     footerCopy:
-      "Setup OpenClaw guidato, troubleshooting e agenti AI per workflow reali.",
-    title: "AgentForge | Setup OpenClaw E Primo Agente AI",
+      "Setup OpenClaw, guide pratiche, troubleshooting e agenti pronti all'uso.",
+    title: "AgentForge Setup | Installare OpenClaw, Guide E Agenti Pronti",
     description:
-      "Installazione guidata di OpenClaw, collegamento di modelli e tool, troubleshooting e primo agente funzionante su Windows, macOS o Linux.",
+      "Installare OpenClaw in modo pratico: guide per Windows, macOS e Linux, tool, troubleshooting e agenti pronti all'uso.",
     formSuccess: "La richiesta sta venendo inviata.",
     formMissing: "Compila correttamente tutti i campi obbligatori.",
   },
@@ -557,11 +655,12 @@ const translations = {
     navOffer: "ماذا ستحصل عليه",
     navProcess: "الخطوات",
     navPricing: "الباقات",
-    navAdvisory: "مختبر الاستراتيجية",
+    navAdvisory: "بعد الإعداد",
     navContact: "التواصل",
     navFaq: "الأسئلة الشائعة",
     navCta: "احجز الإعداد",
-    heroEyebrow: "إعداد OpenClaw بشكل موجّه",
+    brandSub: "إعداد OpenClaw وأدلته والوكلاء الجاهزون",
+    heroEyebrow: "AgentForge Setup لـ OpenClaw",
     heroTitle: "استخدم OpenClaw من دون إضاعة ساعات في الإعداد والتهيئة.",
     heroSub:
       "تثبيت عملي ونماذج وأدوات وأول وكيل يعمل على Windows و macOS و Linux ضمن جلسة موجّهة عبر Teams.",
@@ -605,6 +704,20 @@ const translations = {
     workflowStep3Body: "الأدوات والمهارات والصلاحيات بإعداد مقصود",
     workflowStep4: "أطلق",
     workflowStep4Body: "أول وكيل مختبر على مهمة مفيدة",
+    commandEyebrow: "أوامر حقيقية",
+    commandTitle:
+      "إذا أردت البدء فورًا، فهذه هي الأوامر الرسمية التي يجب أن تراها أولًا.",
+    commandBody:
+      "من يصل إلى هنا يريد التثبيت والبدء الموجّه وأول فحص عملي، لا مجرد أوصاف عامة.",
+    cmd1Title: "macOS و Linux و WSL2",
+    cmd1Body:
+      "السكريبت الرسمي هو أنظف نقطة بداية لـ macOS و Linux و Windows عبر WSL2.",
+    cmd2Title: "Windows PowerShell",
+    cmd2Body:
+      "يمكنك استخدام PowerShell على Windows، لكن WSL2 غالبًا هو الطريق الأكثر استقرارًا لإعداد جدي.",
+    cmd3Title: "بعد التثبيت",
+    cmd3Body:
+      "هنا يبدأ الفرق الحقيقي: بدء موجّه صحيح وفحص نهائي قبل الانتقال إلى الأدوات والوكلاء.",
     guidesEyebrow: "أدلة عملية",
     guidesTitle:
       "أول الصفحات التي تستحق القراءة إذا أردت البدء مع OpenClaw بطريقة عملية.",
@@ -628,22 +741,22 @@ const translations = {
     guide6Title: "وكلاء جاهزون",
     guide6Body:
       "أمثلة عملية للدعم والبحث والتقارير ومسارات العمل التشغيلية الحقيقية.",
-    stat1: "مدة الاستشارة حسب الباقة",
-    stat2: "جلسة مخصصة عبر Teams",
-    stat3: "حد أقصى 48 ساعة للمتابعة التقنية",
-    stat4: "مجموعة سكربتات وباقات Prompts مبدئية",
-    aboutEyebrow: "من نحن",
+    stat1: "مدة الجلسة حسب الباقة",
+    stat2: "جلسة تشغيلية عبر Teams",
+    stat3: "متابعة تقنية خلال 48 ساعة كحد أقصى",
+    stat4: "قائمة تحقق وأوامر وحزمة Prompts مشمولة",
+    aboutEyebrow: "لماذا AgentForge Setup",
     aboutTitle:
-      "استشارات مستقلة مبنية على خبرة دولية وتنفيذ حقيقي، لا على ضجة الذكاء الاصطناعي فقط.",
+      "لن تجد هنا ضجيجًا عن الوكلاء، بل مسارًا عمليًا من التثبيت إلى الاستخدام الفعلي.",
     aboutBody1:
-      "أنا مستشار مستقل أملك خبرة دولية في المنتجات الرقمية والعمليات والتنفيذ المدفوع بالذكاء الاصطناعي. على مدار السنوات ساعدت في إطلاق مشاريع ناجحة متعددة لأسواق مختلفة، مع الجمع بين التنفيذ التقني والواقعية التجارية.",
+      "الموقع مصمم بروح تشغيلية: تثبيت، مزودون، أدوات، صلاحيات، وكلاء جاهزون، وحل مشكلات. الهدف ليس شرح مستقبل الوكلاء، بل مساعدتك على استخدام OpenClaw من دون احتكاك غير ضروري.",
     aboutBody2:
-      "بعد فترة طويلة من العمل وفق قواعد وأولويات وحدود وضعها الآخرون، قررت بناء نشاطي الخاص: ممارسة استشارية مركزة تساعد العملاء على تبني OpenClaw وسير العمل القائم على الوكلاء بسرعة أكبر وبشكل أكثر أمانًا وبنتائج تشغيلية فعلية.",
-    aboutPanelTitle: "ماذا يعني هذا للعملاء",
-    aboutPoint1: "إرشاد مباشر من مستوى خبير بدلًا من دعم عام",
-    aboutPoint2: "رؤية دولية في المنتج والتنفيذ",
-    aboutPoint3: "آراء واضحة حول ما يجب بناؤه أو تحسينه أو تجنبه",
-    aboutPoint4: "مسار عملي من الفكرة إلى وكيل يعمل فعليًا",
+      "وعندما تحتاج إلى جلسة عملية، يكون الهدف تسريع الأجزاء التي تتعطل أكثر: إعداد غير مستقر، نموذج غير مناسب، إضافات غير مفيدة، أو وكيل لا ينتج مهمة عملية.",
+    aboutPanelTitle: "ماذا تجد هنا",
+    aboutPoint1: "أدلة عملية بدلًا من تسويق عام",
+    aboutPoint2: "أوامر حقيقية لا مجرد أفكار",
+    aboutPoint3: "الإعداد والوكلاء وحل المشكلات في مسار واحد",
+    aboutPoint4: "طريق واضح من الصفر إلى الجاهزية",
     whyEyebrow: "لماذا التحرك الآن",
     whyTitle: "المشكلة الحقيقية ليست معرفة أن OpenClaw موجود، بل جعله يعمل بشكل صحيح من المحاولة الأولى.",
     whyBody:
@@ -653,7 +766,7 @@ const translations = {
     risk2: "حيرة حول المزوّد ومفاتيح API والنموذج المحلي أو السحابي",
     risk3: "أدوات ومهارات مضافة بلا خطة واضحة أو بصلاحيات مفرطة",
     risk4: "وكلاء يبدأون بشكل سيئ أو لا يصبحون مفيدين للمهام الحقيقية",
-    offerEyebrow: "ماذا تتضمن الاستشارة",
+    offerEyebrow: "ما الذي تخرج به",
     offerTitle: "نقلل الاحتكاك في 6 نقاط تعطل تقريبًا كل من يبدأ.",
     feat1Title: "تثبيت بلا طرق مسدودة",
     feat1Body:
@@ -673,22 +786,28 @@ const translations = {
     feat6Title: "حل المشكلات والخطوات التالية",
     feat6Body:
       "إذا تعطل شيء ما، نصلح النقطة الحرجة وتنهي الجلسة مع قائمة تحقق واتجاه واضح للمتابعة.",
-    agentsEyebrow: "ما الذي يصبح ممكنًا بعد الإعداد",
+    agentsEyebrow: "وكلاء جاهزون للاستخدام",
     agentsTitle:
-      "عندما يُضبط OpenClaw بشكل صحيح، تتوقف الوكلاء عن كونها مجرد عرض تجريبي وتبدأ في إنجاز عمل مفيد.",
-    agent1Title: "دعم العملاء",
+      "الأمثلة الأكثر فائدة ليست \"وكلاء ذكاء اصطناعي\" بصيغة عامة، بل تدفقات جاهزة يمكن تشغيلها فعلًا.",
+    agent1Title: "وكيل البريد الإلكتروني",
     agent1Body:
-      "الرد على الأسئلة الشائعة وفرز الطلبات وجمع السياق وتحويل الحالات التي تحتاج تدخلًا بشريًا فقط.",
-    agent2Title: "تأهيل العملاء المحتملين",
+      "يقرأ السياق ويقترح الردود ويصفّي الطلبات المتكررة ويترك للحضور البشري فقط الحالات المهمة.",
+    agent2Title: "وكيل التقويم والمتابعة",
     agent2Body:
-      "إدارة التواصل الأول وطرح أسئلة التأهيل وإعداد الملخصات وتمرير الفرص النظيفة إلى المبيعات.",
-    agent3Title: "البحث والمعرفة",
+      "ينظم التذكيرات والمتابعات والخطوات التالية حتى لا ينقطع التسلسل التشغيلي.",
+    agent3Title: "وكيل البحث على الويب",
     agent3Body:
-      "البحث في المستندات الداخلية وتلخيص المصادر ومقارنة الخيارات وإعداد ملاحظات تشغيلية سريعة للفريق.",
-    agent4Title: "التقارير والعمليات",
+      "يجمع المصادر ويلخص النتائج ويعد ملاحظات قابلة للاستخدام بدلًا من تركك وسط تبويبات فوضوية.",
+    agent4Title: "وكيل محلي مع Ollama",
     agent4Body:
-      "مراقبة التدفقات المتكررة وإعداد التحديثات وتنظيم البيانات ودعم مهام التنفيذ الدورية.",
-    processEyebrow: "منهجية الاستشارة",
+      "إذا أردت إعدادًا أكثر محلية أو أكثر تحكمًا، يمكنك البدء من نماذج محلية ثم تطوير التدفق من هناك.",
+    agent5Title: "وكيل self-hosted",
+    agent5Body:
+      "للحالات الأكثر تنظيمًا يمكنك تشغيل OpenClaw في بيئات أكثر تحكمًا وبناء نشر أكثر استقرارًا.",
+    agent6Title: "وكيل التقارير والعمليات",
+    agent6Body:
+      "يجمع البيانات المتكررة ويعد التحديثات ويساعد على إبقاء مسارات العمل التشغيلية مرتبة.",
+    processEyebrow: "المسار العملي",
     processTitle: "ننقلك من الصفر إلى أول وكيل يعمل عبر 4 مراحل.",
     step1Title: "التحقق من نقطة البداية",
     step1Body: "نفهم الأجهزة والمستوى التقني والهدف والقيود حتى نختار إعدادًا واقعيًا من البداية.",
@@ -698,33 +817,56 @@ const translations = {
     step3Body: "نختار المزوّدين والصلاحيات والتكاملات المفيدة لبناء أول تدفّق عمل منطقي.",
     step4Title: "الاختبار النهائي وحل المشكلات",
     step4Body: "نراجع الوكيل الأول ونصلح العوائق المتبقية وننهي بقائمة تحقق وخطوات عملية تالية.",
-    pricingEyebrow: "باقات الاستشارة",
-    pricingTitle: "اختر بين إعداد سريع أو مراجعة استراتيجية مخصصة للوكلاء.",
-    plan1Price: "EUR25",
-    plan1Name: "Kickstart",
+    pricingEyebrow: "الجلسات والباقات",
+    pricingTitle: "اختر بين التثبيت أو الجاهزية الفعلية أو حل المشكلات.",
+    plan1Price: "€25",
+    plan1Name: "Quick Setup",
     plan1Time: "30 دقيقة",
-    plan1Feat1: "إعداد أساسي لـ OpenClaw أو لوكيل أولي",
-    plan1Feat2: "فحص أمني أولي",
-    plan1Feat3: "قالب وكيل مصغّر واحد",
+    plan1Feat1: "تثبيت OpenClaw بشكل موجّه",
+    plan1Feat2: "التحقق من المزوّد أو النموذج",
+    plan1Feat3: "قائمة بدء جاهزة",
     planBtn: "احجز الآن",
-    planFeatured: "الأكثر اختيارًا",
+    planFeatured: "الأكثر فائدة",
     plan2Price: "يُتفق عليه",
-    plan2Name: "Strategy Session",
-    plan2Time: "النطاق يُتفق عليه",
-    plan2Feat1: "مراجعة حالات الاستخدام + خارطة طريق للوكلاء",
-    plan2Feat2: "استراتيجية القنوات وسير العمل",
-    plan2Feat3: "تحديد واضح لأولويات البناء التالية",
+    plan2Name: "Ready To Use",
+    plan2Time: "60 دقيقة",
+    plan2Feat1: "إعداد كامل حتى أول تدفّق عمل",
+    plan2Feat2: "الأدوات والمهارات جاهزة",
+    plan2Feat3: "وكيل تشغيلي واحد تم التحقق منه",
     plan3Price: "يُتفق عليه",
-    plan3Name: "Advisory Sprint",
-    plan3Time: "تعاون مخصص",
-    plan3Feat1: "مراجعة عميقة لوكيل أو عملية قائمة",
-    plan3Feat2: "تحسين التعليمات والتدفقات والمسؤوليات",
-    plan3Feat3: "خطة عملية للتحسين والإطلاق",
-    advisoryEyebrow: "استشارة استراتيجية",
+    plan3Name: "Troubleshooting Lab",
+    plan3Time: "90 دقيقة",
+    plan3Feat1: "تشخيص إعداد معطل أو غير مستقر",
+    plan3Feat2: "إصلاحات للأدوات أو النماذج أو الإضافات أو الصلاحيات",
+    plan3Feat3: "خطة نظيفة للعودة إلى قاعدة مستقرة",
+    advisoryEyebrow: "ما بعد التثبيت",
     advisoryTitle:
-      "ليست للتثبيت فقط: الاستشارة الاستراتيجية مخصصة أيضًا للوكلاء وحالات الاستخدام وقرارات التحسين.",
+      "عندما يعمل OpenClaw فعلًا، يمكن أن تتحول الجلسة إلى مراجعة للتدفقات والوكلاء وقرارات النشر.",
     advisoryBody:
-      "إذا كان OpenClaw يعمل لديك بالفعل، أو كنت فقط تدرس كيف تستخدم الوكلاء في عملك، يمكن تحويل الجلسة إلى مراجعة عملية للتدفقات والتعليمات والقنوات والأتمتة والأدوار والمخاطر. الهدف هو تحديد ما يجب بناؤه وبأي ترتيب.",
+      "بعد الإعداد، الهدف ليس إضافة التعقيد عشوائيًا. الهدف هو تحديد حالات الاستخدام التي تستحق البناء، والقنوات المناسبة، والوكلاء الذين يجب أن يعيشوا فعلًا، والأفكار التي يجب تركها.",
+    troubleEyebrow: "حل المشكلات",
+    troubleTitle:
+      "عندما ينكسر شيء ما، فالقيمة الحقيقية هي معرفة أين تضع يدك أولًا.",
+    troubleBody:
+      "هذه هي أكثر العوائق شيوعًا والتي تستحق أن تظهر مباشرة على الصفحة الرئيسية.",
+    tr1Title: "الأمر لا يعمل",
+    tr1Body:
+      "عندما لا يتعرف النظام على OpenClaw أو يتوقف التثبيت، تكون المشكلة غالبًا في المسار أو المتطلبات المسبقة.",
+    tr2Title: "Windows أم WSL2؟",
+    tr2Body:
+      "كثيرون يبدؤون عبر PowerShell ثم يكتشفون أن WSL2 يجعل الإعداد كله أنظف وأكثر قابلية للتوقع.",
+    tr3Title: "النموذج لا يستجيب جيدًا",
+    tr3Body:
+      "غالبًا لا تكون المشكلة في OpenClaw نفسه، بل في اختيار غير مناسب للمزوّد أو النموذج أو إعداد local مقابل cloud.",
+    tr4Title: "الأدوات والصلاحيات فوضوية",
+    tr4Body:
+      "إذا ربطت أدوات كثيرة أو منحت صلاحيات واسعة جدًا، يصبح الإعداد هشًا قبل أن يصبح مفيدًا.",
+    tr5Title: "الوكيل لا ينجز مهمة حقيقية",
+    tr5Body:
+      "يحدث هذا عادة عندما يكون الـ prompt عامًا جدًا أو عندما لا يرتبط دور الوكيل بتدفق عمل حقيقي.",
+    tr6Title: "لوحة التحكم أو الـ gateway غير طبيعيين",
+    tr6Body:
+      "إذا كان البدء الموجّه سيئًا أو كان الـ daemon غير مستقر، أصلح هذا أولًا قبل إضافة أي شيء آخر.",
     adv1Title: "مراجعة الفكرة",
     adv1Body:
       "نحلل فكرة الوكيل الخاصة بك ونحدد قيمتها التشغيلية ونقاط الضعف والبيانات اللازمة فعلاً.",
@@ -757,7 +899,7 @@ const translations = {
     fb6Meta: "Mariam K. - قائدة العمليات، الرياض",
     contactEyebrow: "قنوات التواصل",
     contactTitle:
-      "يمكنك التواصل لسؤال سريع أو حجز استشارة أكثر تنظيمًا.",
+      "راسلنا من أجل الإعداد أو حل المشكلات أو أول وكيل جاهز للاستخدام.",
     contact1Title: "Teams",
     contact1Body:
       "الخيار الأنسب للجلسات التنفيذية والتثبيت المباشر والمراجعات التقنية مع مشاركة الشاشة.",
@@ -769,26 +911,33 @@ const translations = {
       "مناسب لإرسال الملخصات الأولية والمستندات وحالات الاستخدام وطلبات التسعير التفصيلية.",
     contactEmail: "agenticforge@libero.it",
     faqEyebrow: "أسئلة سريعة",
-    faqTitle: "الأسئلة المتكررة قبل الحجز.",
+    faqTitle: "الأسئلة العملية التي تظهر قبل الانطلاق.",
     faq1Q: "هل أحتاج خبرة تقنية مسبقة؟",
-    faq1A: "لا. الاستشارة مناسبة أيضًا لغير التقنيين، ونشرح كل خطوة بلغة واضحة.",
-    faq2Q: "هل الجلسة مخصصة فعلًا؟",
-    faq2A: "نعم. كل جلسة تبدأ من هدفك الحقيقي وتنتهي بوكيل مضبوط على سياقك.",
-    faq3Q: "هل يمكن أن أحضر مع زميل؟",
+    faq1A:
+      "لا. التدفق مصمم أيضًا لمن لا يريد الضياع بين الطرفية والاعتماديات والتهيئات المتفرقة.",
+    faq2Q: "هل يمكنني استخدام نماذج محلية مثل Ollama؟",
+    faq2A:
+      "نعم، عندما يتطلب الاستخدام ذلك. المهم هو تحديد ما إذا كان local أو cloud هو الأنسب لهدفك وبيئتك.",
+    faq3Q: "هل تساعدني إذا انكسر الإعداد؟",
     faq3A:
-      "نعم، يمكن الحضور لشخصين دون تكلفة إضافية في باقتي Builder و Ops Pro.",
-    faq4Q: "ما المنصة المستخدمة؟",
+      "نعم. جزء كبير من العمل هو معرفة أين انكسر التدفق وكيف نعيده إلى قاعدة مستقرة.",
+    faq4Q: "هل أستطيع البدء من Windows أو macOS أو Linux؟",
     faq4A:
-      "Microsoft Teams مع مشاركة الشاشة، ونرسل رابط الجلسة وقائمة التحضير مسبقًا.",
-    bookEyebrow: "احجز الاستشارة",
-    bookTitle: "أدخل OpenClaw أو سير العمل الوكيلي التالي إلى عملك عبر جلسة مركزة على Teams.",
+      "نعم. لدينا بالفعل أدلة ومسارات لكل الأنظمة الثلاثة، مع WSL2 كخيار مفيد على Windows.",
+    bookEyebrow: "احجز الإعداد",
+    bookTitle: "انقل OpenClaw من مجرد تثبيت إلى قيمة عملية عبر جلسة تشغيلية على Teams.",
     bookSub: "املأ البيانات وسنرسل لك موعدًا مقترحًا خلال 24 ساعة عمل.",
-    bookTeams: "بريد مباشر",
-    formTypeLabel: "نوع الاستشارة",
-    formTypePlaceholder: "اختر محور الجلسة",
+    bookTeams: "اكتب عبر البريد",
+    bookTeamsHref:
+      "mailto:agenticforge@libero.it?subject=AgentForge%20Setup%20Request",
+    formSubject: "AgentForge Setup Request",
+    formAutoresponse:
+      "وصلنا طلبك من AgentForge بخصوص الإعداد أو حل المشكلات أو أول وكيل. سنعاود التواصل معك قريبًا.",
+    formTypeLabel: "محور الجلسة",
+    formTypePlaceholder: "اختر من أين تريد أن تبدأ",
     formTypeSetup: "الإعداد والتثبيت",
-    formTypeStrategy: "مراجعة الأفكار وتطوير الوكلاء",
-    formTypeOptimization: "تحسين وكيل موجود",
+    formTypeStrategy: "أول وكيل أو سير عمل",
+    formTypeOptimization: "حل المشكلات / التحسين",
     formChannelLabel: "القناة المفضلة",
     formChannelPlaceholder: "اختر كيف تريد أن نتواصل معك",
     formChannelTeams: "Teams",
@@ -804,14 +953,14 @@ const translations = {
     formGoalPh: "أريد وكيلًا يؤتمت استقبال العملاء",
     formTelegramLabel: "معرّف Telegram (اختياري)",
     formTelegramPh: "@yourhandle",
-    formSubmit: "إرسال طلب الاستشارة",
+    formSubmit: "إرسال طلب الإعداد",
     formHelp:
       "يرسل النموذج الطلب مباشرة إلى agenticforge@libero.it عبر خدمة نماذج للمواقع الثابتة.",
     footerCopy:
-      "إعداد OpenClaw بشكل موجّه وحل المشكلات ووكلاء ذكاء اصطناعي لمسارات عمل حقيقية.",
-    title: "AgentForge | إعداد OpenClaw وأول وكيل ذكاء اصطناعي",
+      "إعداد OpenClaw وأدلته العملية وحل المشكلات ووكلاء جاهزون للاستخدام.",
+    title: "AgentForge Setup | تثبيت OpenClaw وأدلته ووكلاؤه الجاهزون",
     description:
-      "تثبيت موجّه لـ OpenClaw وربط النماذج والأدوات وحل المشكلات والوصول إلى أول وكيل يعمل على Windows أو macOS أو Linux.",
+      "ثبّت OpenClaw بطريقة عملية مع أدلة Windows و macOS و Linux، إضافة إلى حل المشكلات ووكلاء جاهزين.",
     formSuccess: "يتم الآن إرسال الطلب.",
     formMissing: "يرجى تعبئة جميع الحقول المطلوبة بشكل صحيح.",
   },
@@ -819,6 +968,8 @@ const translations = {
 
 const textNodes = document.querySelectorAll("[data-i18n]");
 const placeholderNodes = document.querySelectorAll("[data-i18n-placeholder]");
+const valueNodes = document.querySelectorAll("[data-i18n-value]");
+const hrefNodes = document.querySelectorAll("[data-i18n-href]");
 const langButtons = document.querySelectorAll(".lang-btn");
 const form = document.querySelector("#leadForm");
 const formMessage = document.querySelector("#formMessage");
@@ -838,6 +989,20 @@ function applyLanguage(lang) {
     const key = node.dataset.i18nPlaceholder;
     if (pack[key]) {
       node.setAttribute("placeholder", pack[key]);
+    }
+  });
+
+  valueNodes.forEach((node) => {
+    const key = node.dataset.i18nValue;
+    if (pack[key]) {
+      node.value = pack[key];
+    }
+  });
+
+  hrefNodes.forEach((node) => {
+    const key = node.dataset.i18nHref;
+    if (pack[key]) {
+      node.setAttribute("href", pack[key]);
     }
   });
 
